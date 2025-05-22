@@ -1,0 +1,86 @@
+# Databricks notebook
+# Title: Fraud Model Demo – From Data to Decisions
+
+# --------------------------------------------
+# 1. Setup and Create Initial Transaction Dataset (v1)
+# --------------------------------------------
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import rand, col, when
+import mlflow
+import mlflow.sklearn
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import pandas as pd
+
+spark = SparkSession.builder.getOrCreate()
+
+# Simulate initial dataset
+df_v1 = spark.range(1000).withColumn("amount", (rand() * 1000).cast("int")) \
+    .withColumn("merchant_code", (rand() * 5).cast("int")) \
+    .withColumn("fraud", when(rand() < 0.02, 1).otherwise(0))  # 2% fraud
+
+df_v1.write.format("delta").mode("overwrite").save("/tmp/fraud_demo_data")
+
+# Register version 1
+spark.sql("DROP TABLE IF EXISTS fraud_demo_data")
+spark.sql("CREATE TABLE fraud_demo_data USING DELTA LOCATION '/tmp/fraud_demo_data'")
+
+# --------------------------------------------
+# 2. Simulate Improved Dataset (v2 – More labeled fraud)
+# --------------------------------------------
+df_v2 = df_v1.withColumn("fraud", when((col("amount") > 900) | (rand() < 0.03), 1).otherwise(0))  # ~5% fraud
+df_v2.write.format("delta").mode("overwrite").option("overwriteSchema", "true").save("/tmp/fraud_demo_data")
+
+# Now we have 2 versions: version 1 (via time travel) and version 2 (current)
+# --------------------------------------------
+# 3. Load Data (Current and Versioned)
+# --------------------------------------------
+# Load latest data
+df_current = spark.read.format("delta").load("/tmp/fraud_demo_data")
+
+# Load version 0
+df_v1_load = spark.read.format("delta").option("versionAsOf", 0).load("/tmp/fraud_demo_data")
+
+# Compare counts
+print("Fraud count – current:", df_current.filter("fraud == 1").count())
+print("Fraud count – v1:", df_v1_load.filter("fraud == 1").count())
+
+# --------------------------------------------
+# 4. Train and Log Model with MLflow
+# --------------------------------------------
+df_pd = df_current.select("amount", "merchant_code", "fraud").toPandas()
+
+X = df_pd[["amount", "merchant_code"]]
+y = df_pd["fraud"]
+
+model = RandomForestClassifier(n_estimators=50, max_depth=5, random_state=42)
+model.fit(X, y)
+
+preds = model.predict(X)
+acc = accuracy_score(y, preds)
+
+# Track with MLflow
+with mlflow.start_run(run_name="Fraud_Model_Demo"):
+    mlflow.log_metric("accuracy", acc)
+    mlflow.sklearn.log_model(model, artifact_path="model", registered_model_name="FraudDetectionModel")
+
+print(f"Model accuracy: {acc:.4f}")
+
+# --------------------------------------------
+# 5. Register and Deploy the Model (UI Step)
+# --------------------------------------------
+# After running, go to:
+# "Machine Learning" > "Models" > FraudDetectionModel
+# Promote to Staging / Production
+# Enable serving if desired
+
+# --------------------------------------------
+# 6. Monitoring and Versioning
+# --------------------------------------------
+# View model performance metrics in MLflow UI
+# View data versioning with:
+display(spark.read.format("delta").option("versionAsOf", 0).load("/tmp/fraud_demo_data").groupBy("fraud").count())
+display(spark.read.format("delta").load("/tmp/fraud_demo_data").groupBy("fraud").count())
+
+# View model versions in MLflow registry:
+# mlflow.search_model_versions("name='FraudDetectionModel'")
