@@ -26,7 +26,7 @@ Here's the **full slide content** for your Databricks presentation, designed for
 
 **Main Points:**
 
-* Databricks is a **Lakehouse Platform**—combining the scalability of data lakes with the performance of data warehouses.
+* Databricks is a **Lakehouse Platform**—combining the scalability of data lakes with the performance of data warehouses
 * Built on open standards (Spark, Delta Lake, MLflow).
 * Supports all types of data: structured, unstructured, streaming, batch.
 * One workspace for data engineers, scientists, and analysts to collaborate.
