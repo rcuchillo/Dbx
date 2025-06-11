@@ -93,6 +93,20 @@ for window in [60, 90]:
         feature_df = temp_df.groupBy("customer_id").agg(func.alias(name))
         feature_defs[name] = feature_df
 
+# Define merchant_agg before using it in feature merging
+merchant_features = df.filter(col("transaction_date") >= expr(f"date_sub(current_date(), {lookback_days})")) \
+    .groupBy("customer_id", "merchant") \
+    .agg(
+        count("transaction_id").alias("merchant_tx_count_30d"),
+        sum("amount").alias("merchant_total_amount_30d"),
+        avg("amount").alias("merchant_avg_amount_30d")
+    )
+
+merchant_agg = merchant_features.groupBy("customer_id").agg(
+    avg("merchant_tx_count_30d").alias("avg_tx_per_merchant_30d"),
+    sum("merchant_total_amount_30d").alias("total_amount_all_merchants_30d")
+)
+
 # Merge expanded features
 final_features = reduce(
     lambda left, right: left.join(right, on="customer_id", how="outer"),
