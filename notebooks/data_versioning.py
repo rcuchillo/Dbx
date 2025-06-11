@@ -1,5 +1,47 @@
 # Databricks Notebook: Fraud Label Maturity & Time Travel Demo
 
+# Databricks Notebook: Fraud Label Maturity & Time Travel Demo
+
+"""
+This notebook demonstrates the power of Delta Lake's data versioning through a fraud detection example.
+
+## Why Data Versioning Matters
+
+In regulated domains like fraud detection and financial services, it's critical to know **exactly what data** was used to train a model, generate features, or validate results.
+
+Without versioning, teams often use unreliable workarounds such as:
+- Filtering data based on timestamps (e.g., `transaction_date <= observation_date`)
+- Relying on naming conventions or metadata columns to approximate observation windows
+
+These approaches are:
+- ❌ Time-consuming
+- ❌ Error-prone
+- ❌ Not always reproducible
+- ❌ Costly when rerunning large pipelines
+
+### ✅ With Delta Lake versioning:
+- You can **travel back in time** to the exact snapshot of the data used in model training.
+- It ensures **governance, auditability, and reproducibility**.
+- It enables easy comparison between data versions as fraud labels mature over time.
+
+This notebook uses a synthetic example where fraud labels become known over 90 days, and we demonstrate how to:
+1. Write initial data as a Delta table
+2. Simulate label updates at 30, 60, and 90 days
+3. Use Delta Lake time travel to query historical snapshots
+4. Visualize how fraud label maturity evolves
+"""
+
+# COMMAND ----------
+# Import libraries
+from pyspark.sql.functions import col
+from datetime import datetime
+import plotly.express as px
+
+# Paths
+base_path = "dbfs:/tmp/fraud_demo/transactions"
+csv_path = "dbfs:/tmp/transactions.csv"
+
+
 # COMMAND ----------
 # Import libraries
 from pyspark.sql.functions import col
