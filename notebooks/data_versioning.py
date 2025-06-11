@@ -7,10 +7,14 @@ from datetime import datetime
 import plotly.express as px
 
 # Paths
-base_path = "/mnt/fraud_demo/transactions"
-csv_path = "/mnt/fraud_demo/transactions.csv"
+base_path = "dbfs:/tmp/fraud_demo/transactions"
+csv_path = "dbfs:/tmp/fraud_demo/transactions.csv"
 
 # COMMAND ----------
+# Copy file from Workspace to DBFS if needed
+# (Run this once if the file is uploaded to your Workspace)
+dbutils.fs.cp("file:/Workspace/Users/your.name@databricks.com/transactions.csv", csv_path)
+
 # Load CSV (Day 0 data)
 df_day0 = spark.read.option("header", True).option("inferSchema", True).csv(csv_path)
 df_day0 = df_day0.withColumn("is_fraud", col("is_fraud").cast("boolean"))
