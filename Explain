@@ -1,0 +1,141 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+import shap
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.metrics.pairwise import euclidean_distances
+
+# Dummy data generation
+def generate_dummy_data():
+    np.random.seed(0)
+    transactions = pd.DataFrame({
+        'transaction_id': [f'TXN{i}' for i in range(100)],
+        'customer_id': np.random.choice([f'CUST{i}' for i in range(10)], 100),
+        'amount': np.random.uniform(10, 1000, 100),
+        'merchant_category': np.random.choice(['Food', 'Tech', 'Clothing', 'Travel'], 100),
+        'feature1': np.random.normal(0, 1, 100),
+        'feature2': np.random.normal(5, 2, 100),
+        'feature3': np.random.normal(-3, 1, 100),
+        'feature4': np.random.normal(2, 3, 100),
+        'feature5': np.random.normal(1, 1, 100),
+        'fraud_flag': np.random.choice([0, 1], 100, p=[0.9, 0.1])
+    })
+
+    customers = pd.DataFrame({
+        'customer_id': [f'CUST{i}' for i in range(10)],
+        'first_name': [f'Name{i}' for i in range(10)],
+        'surname': [f'Surname{i}' for i in range(10)],
+        'age': np.random.randint(18, 70, 10),
+        'postcode': [f'PC{i}AA' for i in range(10)],
+        'num_products': np.random.randint(1, 5, 10),
+        'customer_since': pd.date_range(start='2015-01-01', periods=10, freq='365D')
+    })
+
+    return transactions, customers
+
+transactions, customers = generate_dummy_data()
+
+# Dashboard layout
+st.set_page_config(layout="wide")
+
+col1, col2, col3 = st.columns([2, 2, 2])
+
+# Component 1: Search Engine
+with col1:
+    st.markdown("### Search Transaction")
+    selected_txn_id = st.selectbox("Select Transaction", transactions['transaction_id'].tolist())
+    selected_txn = transactions[transactions['transaction_id'] == selected_txn_id].iloc[0]
+    selected_customer_id = selected_txn['customer_id']
+    customer_info = customers[customers['customer_id'] == selected_customer_id].iloc[0]
+
+    # Component 2: Customer Info
+    st.markdown("---")
+    st.markdown("### Customer Info")
+    st.write({
+        'First Name': customer_info['first_name'],
+        'Surname': customer_info['surname'],
+        'Age': customer_info['age'],
+        'Postcode': customer_info['postcode'],
+        'Number of Products': customer_info['num_products'],
+        'Customer Since': customer_info['customer_since'].date()
+    })
+
+    st.markdown("### Last 10 Transactions")
+    customer_txns = transactions[transactions['customer_id'] == selected_customer_id].sort_values(by='transaction_id', ascending=False).head(10)
+    for _, row in customer_txns.iterrows():
+        st.markdown(f"**{row['transaction_id']}** - £{row['amount']:.2f} - {row['merchant_category']}")
+
+# Component 3: Feature Contribution Bar
+with col2:
+    st.markdown("### Top Feature Contributions")
+    features = ['feature1', 'feature2', 'feature3', 'feature4', 'feature5']
+    top_feature_values = selected_txn[features]
+    avg_txns = transactions[transactions['customer_id'] == selected_customer_id].sort_values(by='transaction_id', ascending=False).head(20)
+    avg_feature_values = avg_txns[features].mean()
+
+    fig = go.Figure()
+    fig.add_trace(go.Bar(x=top_feature_values.values, y=features, name='Current', orientation='h'))
+    fig.add_trace(go.Bar(x=avg_feature_values.values, y=features, name='Avg Last 20', orientation='h'))
+    fig.update_layout(barmode='group')
+    st.plotly_chart(fig)
+
+    # Component 4: SHAP
+    st.markdown("### SHAP Explainability")
+    # Simulate a SHAP explanation
+    explainer = shap.Explainer(lambda x: x[:, 0], np.random.randn(100, 5))
+    shap_values = explainer(np.array([top_feature_values.values]))
+
+    fig, ax = plt.subplots()
+    shap.plots.waterfall(shap_values[0], max_display=5, show=False)
+    st.pyplot(fig)
+
+# Component 5: 3D Plot
+with col3:
+    st.markdown("### 3D Similarity Plot")
+    selected_features = top_feature_values.index[:3].tolist()
+    pca_data = transactions[selected_features]
+    pca = PCA(n_components=3)
+    coords = pca.fit_transform(pca_data)
+
+    distances = euclidean_distances([selected_txn[selected_features]], pca_data[selected_features])
+    transactions['distance'] = distances[0]
+    closest = transactions.sort_values('distance').head(11)  # includes self
+
+    df_vis = closest.copy()
+    df_vis['x'], df_vis['y'], df_vis['z'] = coords[closest.index, 0], coords[closest.index, 1], coords[closest.index, 2]
+    df_vis['color'] = df_vis['fraud_flag'].map({0: 'green', 1: 'red'})
+    df_vis['hover'] = df_vis.apply(lambda row: f"ID: {row['transaction_id']}<br>Fraud: {row['fraud_flag']}<br>Amount: £{row['amount']:.2f}<br>Category: {row['merchant_category']}", axis=1)
+
+    fig = px.scatter_3d(df_vis, x='x', y='y', z='z',
+                        color='color',
+                        hover_name='hover',
+                        title='Transaction Similarity',
+                        custom_data=['transaction_id'])
+
+    fig.update_traces(marker=dict(size=6), selector=dict(mode='markers'))
+    selected = st.plotly_chart(fig)
+
+    # NOTE: Clicking and refreshing via selection requires session state or rerun logic
+    st.markdown("*Clicking a transaction to refresh requires Streamlit state management (e.g. session state or component callback).*")
+
+
+The complete end-to-end Streamlit dashboard code has been created using dummy data and includes:
+
+Search bar for transaction ID
+
+Customer details with a timeline of past 10 transactions
+
+Top feature contributions with comparison to average past 20 transactions
+
+SHAP explainability plot
+
+Interactive 3D similarity plot with hover tooltips and basic click interactivity
+
+
+To make clicking on a transaction in the 3D plot trigger a dashboard refresh, you'll need to manage selected transaction state via st.session_state or a custom Streamlit component that captures Plotly click events.
+
+Would you like help wiring that interactivity or deploying this on Databricks next?
+
