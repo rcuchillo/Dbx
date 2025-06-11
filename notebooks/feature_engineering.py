@@ -158,30 +158,23 @@ final_features = final_features.join(merchant_agg, on="customer_id", how="outer"
 
 final_features.display()
 
-# 🗺️ Visual Schema
-import graphviz
+from graphviz import Source
+from IPython.display import display, SVG
 
-dot = graphviz.Digraph()
-dot.attr(rankdir="LR")
+diagram = """
+digraph {
+  rankdir=LR;
+  "Raw Transactions" -> "Filtered by Date Window";
+  "Filtered by Date Window" -> "Customer-level Features";
+  "Filtered by Date Window" -> "Merchant-level Features";
+  "Customer-level Features" -> "Merged Feature Table";
+  "Merchant-level Features" -> "Merged Feature Table";
+  "Merged Feature Table" -> "Feature Store";
+}
+"""
 
-dot.node("Raw Data", "Raw Transactions")
-dot.node("Filtered", "Filtered by Date Window")
-dot.node("CustomerFeatures", "Customer-level Features")
-dot.node("MerchantFeatures", "Merchant-level Features")
-dot.node("Final", "Merged Feature Table")
-dot.node("Store", "Feature Store")
-
-dot.edges([("Raw Data", "Filtered"),
-           ("Filtered", "CustomerFeatures"),
-           ("Filtered", "MerchantFeatures"),
-           ("CustomerFeatures", "Final"),
-           ("MerchantFeatures", "Final"),
-           ("Final", "Store")])
-
-dot.render(format="png", cleanup=False, outfile="/tmp/feature_flowchart.png")
-from IPython.display import Image
-Image("/tmp/feature_flowchart.png")
-
+# Render safely as SVG
+display(SVG(Source(diagram).pipe(format="svg")))
 # 🔍 Feature Store Preview
 
 # View schema from Feature Store
