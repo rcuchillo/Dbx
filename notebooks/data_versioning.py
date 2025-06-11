@@ -29,6 +29,21 @@ This notebook uses a synthetic example where fraud labels become known over 90 d
 2. Simulate label updates at 30, 60, and 90 days
 3. Use Delta Lake time travel to query historical snapshots
 4. Visualize how fraud label maturity evolves
+
+# COMMAND ----------
+# Visual comparison: filtering vs time travel (for illustration)
+# This simulates how teams currently filter by observation date to mimic point-in-time correctness
+# vs using versionAsOf which guarantees exact data state
+
+observation_cutoff = "2025-01-31"
+filtered_df = spark.read.format("delta").load(base_path).filter(f"transaction_date <= '{observation_cutoff}'")
+print(f"Filtered records <= {observation_cutoff}: {filtered_df.count()}")
+
+# Time travel to version used at observation time (assuming version 0 reflects that state)
+time_travel_df = spark.read.format("delta").option("versionAsOf", 0).load(base_path)
+print(f"Records in version 0: {time_travel_df.count()}")
+# Import libraries
+
 """
 
 # COMMAND ----------
