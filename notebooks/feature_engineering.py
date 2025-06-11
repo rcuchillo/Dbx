@@ -116,17 +116,15 @@ final_features = reduce(
 final_features.display()
 
 # Add tags and description
-from databricks.feature_store.entities.feature_metadata import FeatureMetadata
-
-metadata = FeatureMetadata(
-    description="Automated features for fraud detection: customer-level metrics over multiple windows, merchant interactions.",
-    tags={
-        "use_case": "fraud_detection",
-        "owner": "ml_team@datacompany.com",
-        "window_sizes": "7,14,30,60,90",
-        "source": "transaction_logs"
-    }
-)
+# Define feature metadata manually since FeatureMetadata module is unavailable
+metadata = type("Metadata", (), {})()
+metadata.description = "Automated features for fraud detection: customer-level metrics over multiple windows, merchant interactions."
+metadata.tags = {
+    "use_case": "fraud_detection",
+    "owner": "ml_team@datacompany.com",
+    "window_sizes": "7,14,30,60,90",
+    "source": "transaction_logs"
+}
 
 from databricks.feature_store import FeatureStoreClient
 fs = FeatureStoreClient()
@@ -137,11 +135,6 @@ fs.create_table(
     df=final_features,
     description=metadata.description,
     tags=metadata.tags
-)
-    name="fraud_demo.customer_features",
-    primary_keys=["customer_id"],
-    df=final_features,
-    description="Automated customer features for fraud detection"
 )
 
 # COMMAND ----------
