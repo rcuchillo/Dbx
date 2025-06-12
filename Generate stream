@@ -1,0 +1,49 @@
+import pandas as pd
+import numpy as np
+import time
+import uuid
+from datetime import datetime
+from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StringType, DoubleType, IntegerType, TimestampType
+
+spark = SparkSession.builder.getOrCreate()
+
+# Delta path for streaming
+output_path = "/tmp/stream_transactions"
+
+# Clear existing files (for development/demo)
+dbutils.fs.rm(output_path, True)
+
+schema = StructType() \
+    .add("timestamp", TimestampType()) \
+    .add("transaction_id", StringType()) \
+    .add("amount", DoubleType()) \
+    .add("score", IntegerType()) \
+    .add("is_fraud", IntegerType())
+
+def generate_batch(n=10):
+    data = []
+    for _ in range(n):
+        is_fraud = np.random.rand() < 0.3
+        if is_fraud:
+            score = np.random.choice(range(801, 1001), p=[0.9/200]*180 + [0.1/20]*20)  # 90% > 800
+        else:
+            high_score = np.random.rand() < 0.2
+            score = np.random.randint(851, 1001) if high_score else np.random.randint(0, 850)
+
+        row = {
+            "timestamp": datetime.now(),
+            "transaction_id": str(uuid.uuid4()),
+            "amount": np.round(np.random.exponential(50), 2),
+            "score": score,
+            "is_fraud": int(is_fraud)
+        }
+        data.append(row)
+    return pd.DataFrame(data)
+
+# Write new data every 10 seconds
+while True:
+    df = generate_batch(10)
+    spark_df = spark.createDataFrame(df, schema=schema)
+    spark_df.write.format("delta").mode("append").save(output_path)
+    time.sleep(10)
