@@ -1,0 +1,52 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import time
+from delta.tables import DeltaTable
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.getOrCreate()
+table = DeltaTable.forPath(spark, "/tmp/stream_transactions")
+
+st.title("🔍 Live Fraud Detection Monitoring Dashboard")
+
+# Auto-refresh
+st_autorefresh = st.empty()
+
+while True:
+    df = table.toDF().orderBy("timestamp", ascending=False).limit(1000)
+    pdf = df.toPandas()
+
+    if pdf.empty:
+        st.write("Waiting for data...")
+        time.sleep(5)
+        continue
+
+    # Overall and rolling 200
+    overall = pdf
+    last_200 = pdf.head(200)
+
+    for name, data in [("Overall", overall), ("Last 200", last_200)]:
+        st.header(f"{name} Score Distribution")
+        st.bar_chart(data["score"])
+
+    # Metrics
+    high_score = pdf[pdf["score"] > 800]
+    fraud_high = high_score[high_score["is_fraud"] == 1]
+    fraud_total = pdf[pdf["is_fraud"] == 1]
+
+    detection_rate = len(fraud_high) / len(fraud_total) if len(fraud_total) > 0 else 0
+
+    fraud_value_total = fraud_total["amount"].sum()
+    fraud_value_detected = fraud_high["amount"].sum()
+    value_detection_rate = fraud_value_detected / fraud_value_total if fraud_value_total > 0 else 0
+
+    st.subheader("📌 Key Metrics")
+    st.metric("Fraud Detection Rate (>800)", f"{detection_rate:.2%}")
+    st.metric("Fraud Value Detection Rate (>800)", f"{value_detection_rate:.2%}")
+    st.metric("Total Transactions", f"{len(pdf):,}")
+    st.metric("Detected Fraud Count", f"{len(fraud_high):,}")
+    st.metric("Detected Fraud Value", f"${fraud_value_detected:,.2f}")
+
+    time.sleep(10)
+    st_autorefresh.empty()
