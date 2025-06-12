@@ -1,0 +1,40 @@
+import time
+from IPython.display import clear_output, displayHTML
+import pandas as pd
+import plotly.express as px
+from delta.tables import DeltaTable
+from pyspark.sql import SparkSession
+
+# Set up
+spark = SparkSession.builder.getOrCreate()
+delta_path = "/tmp/stream_transactions"
+table = DeltaTable.forPath(spark, delta_path)
+
+# Read score threshold from widget
+threshold = int(dbutils.widgets.get("score_threshold"))
+
+# Live dashboard loop
+for i in range(50):  # 50 updates (~8 min)
+    clear_output(wait=True)
+
+    df = (
+        table.toDF()
+        .orderBy("timestamp", ascending=False)
+        .limit(1000)
+        .toPandas()
+    )
+
+    if df.empty:
+        print("⏳ Waiting for transactions...")
+        time.sleep(10)
+        continue
+
+    last_200 = df.head(200)
+
+    # Plotly: Score Distribution (All)
+    fig1 = px.histogram(df, x="score", nbins=20, title="📊 Score Distribution (Overall)", opacity=0.75)
+    fig1.update_layout(bargap=0.1, xaxis_title="Score", yaxis_title="Count")
+    displayHTML(fig1.to_html(full_html=False, include_plotlyjs='cdn'))
+
+    # Plotly: Score Distribution (Last 200)
+    fig2 = px.histogram(last_200, x="score", nbins=20, title="📊 Score Distribution
