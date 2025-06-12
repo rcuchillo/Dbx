@@ -5,18 +5,19 @@ import plotly.express as px
 from delta.tables import DeltaTable
 from pyspark.sql import SparkSession
 
-# Set up
+# Initialize Spark and Delta table
 spark = SparkSession.builder.getOrCreate()
 delta_path = "/tmp/stream_transactions"
 table = DeltaTable.forPath(spark, delta_path)
 
-# Read score threshold from widget
+# Read the threshold once from widget
 threshold = int(dbutils.widgets.get("score_threshold"))
 
 # Live dashboard loop
-for i in range(50):  # 50 updates (~8 min)
+for i in range(50):  # adjust as needed (~8 mins)
     clear_output(wait=True)
 
+    # Load the latest 1000 transactions
     df = (
         table.toDF()
         .orderBy("timestamp", ascending=False)
@@ -31,10 +32,34 @@ for i in range(50):  # 50 updates (~8 min)
 
     last_200 = df.head(200)
 
-    # Plotly: Score Distribution (All)
+    # Plot: Score Distribution (Overall)
     fig1 = px.histogram(df, x="score", nbins=20, title="📊 Score Distribution (Overall)", opacity=0.75)
     fig1.update_layout(bargap=0.1, xaxis_title="Score", yaxis_title="Count")
     displayHTML(fig1.to_html(full_html=False, include_plotlyjs='cdn'))
 
-    # Plotly: Score Distribution (Last 200)
-    fig2 = px.histogram(last_200, x="score", nbins=20, title="📊 Score Distribution
+    # Plot: Score Distribution (Last 200)
+    fig2 = px.histogram(last_200, x="score", nbins=20, title="📊 Score Distribution (Last 200)", opacity=0.75)
+    fig2.update_layout(bargap=0.1, xaxis_title="Score", yaxis_title="Count")
+    displayHTML(fig2.to_html(full_html=False, include_plotlyjs='cdn'))
+
+    # Compute detection metrics
+    fraud_total = df[df["is_fraud"] == 1]
+    high_score = df[df["score"] > threshold]
+    fraud_detected = high_score[high_score["is_fraud"] == 1]
+
+    detection_rate = len(fraud_detected) / len(fraud_total) if len(fraud_total) > 0 else 0
+    fraud_value_total = fraud_total["amount"].sum()
+    fraud_value_detected = fraud_detected["amount"].sum()
+    value_detection_rate = fraud_value_detected / fraud_value_total if fraud_value_total > 0 else 0
+
+    # Display summary
+    print(f"📌 Key Metrics (Threshold: {threshold})")
+    print(f"----------------------------------------")
+    print(f"Total Transactions:         {len(df):,}")
+    print(f"Detected Fraud Count:       {len(fraud_detected):,}")
+    print(f"Detected Fraud Value:       ${fraud_value_detected:,.2f}")
+    print(f"Fraud Detection Rate:       {detection_rate:.2%}")
+    print(f"Fraud Value Detection Rate: {value_detection_rate:.2%}")
+
+    # Wait before next refresh
+    time.sleep(10)
