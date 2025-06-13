@@ -1,23 +1,40 @@
-Got it — here's a streamlined version in the format you’re after, with each bullet structured as: Feature Name: What it demonstrates.
+Here’s a clean, executive-friendly summary slide you can use for "Benefits and Limitations of Databricks". It's jargon-free and well-suited for a business or leadership audience.
 
 
 ---
 
-Data Versioning: Track changes in datasets over time using Time Travel to support reproducibility and auditability.
+Databricks: Benefits & Limitations
 
-Simulated Data Maturity: Generate transaction data in stages to reflect how data evolves in real-world systems.
+✅ Key Benefits
 
-Feature Registry: Log and reuse engineered features with consistent definitions across projects and teams.
+Scalable: Handles large data volumes without slowing down
 
-Experiment Tracking: Record hyperparameter tuning runs and model metrics to compare performance transparently.
+All-in-One: Combines data engineering, analytics, and machine learning in one platform
 
-Model Deployment: Register and deploy the best model version directly from the MLflow model registry.
+Collaborative: Easy for teams to work together in real time
 
-Model Monitoring: Track live model performance, data drift, and fraud detection rates through interactive dashboards.
+Automated Workflows: Simplifies model training, deployment, and monitoring
+
+Cloud-Based: No infrastructure to manage, fast to scale up or down
+
+Strong Governance: Built-in tools to track data, code, and models for compliance
+
+
+⚠️ Key Limitations
+
+Cost: Can become expensive if not carefully managed
+
+Learning Curve: Takes time for new users to get up to speed
+
+Dependency on Cloud: Requires stable internet and cloud setup
+
+Overhead for Small Teams: Might be too much for simple use cases
+
+Limited Custom UI: Dashboards may need external tools (e.g., Power BI, Streamlit) for tailored views
 
 
 
 ---
 
-Let me know if you want a shorter version for a visual timeline or a longer one for speaker notes.
+Let me know if you want it formatted into PowerPoint or with visuals/icons.
 
