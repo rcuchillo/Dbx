@@ -1,33 +1,25 @@
-Thank you — that context is important. Here's a refined set of bullet points tailored for your use case involving Suspicious Activity Reports (SARs), ring-fencing alerts below the threshold, and sampling for Back-to-Live (BTL) testing:
+Here's a clear and professional draft you can use in response to the query:
 
 
 ---
 
-✅ Why Use the Model at svire > 0.17 for SAR Escalation
+Thank you for your message.
 
-SAR-Quality Alert Concentration: Alerts with svire > 0.17 capture the majority of alerts historically leading to SAR filings, ensuring high-value escalations remain prioritized.
+Yes, there is a structured testing and governance framework in place to confirm the reliability of the new approach:
 
-Efficient Resource Allocation: Focusing investigations above 0.17 allows investigative resources to concentrate on alerts most likely to result in SARs, improving case quality and throughput.
+The BUK Retail ML model has been validated by IVU in line with MRM guidelines.
 
-Operational Scalability: The alert volume above 0.17 is manageable within existing team capacity, while alerts below can be ring-fenced for deferred processing or automation.
+We conduct quarterly monitoring to assess model performance and stability.
 
-Ring-Fencing Below Threshold: Alerts scoring ≤0.17 are not discarded but safely isolated, preserving full auditability and enabling targeted review as needed.
+In addition, monthly governance sessions are held to review the low-risk sampling approach. These cover key areas such as guardrails, BTL testing, score stability, and model performance.
 
-BTL Sampling Ensures Control: A representative sample from the ring-fenced population is worked through BTL to monitor model drift, uncover emerging patterns, and validate missed fraud risk.
+Our processes are fully documented, including the controls implemented to ensure consistent execution. This also outlines escalation procedures for any deviations, including data quality issues and reconciliation gaps.
 
-SAR Filing Rates Validate Threshold: Historical analysis shows a significantly higher SAR filing rate for alerts >0.17 versus those below, supporting the threshold as a natural operational cutoff.
 
-Risk Appetite Alignment: The proposed threshold reflects the organization’s current risk appetite and balances risk mitigation with customer experience and operational cost.
-
-Regulatory Defensibility: The combined approach (active review >0.17 + sampling ≤0.17) demonstrates a structured, risk-based methodology aligned with regulatory expectations for suspicious activity detection.
-
-BTL Insights Feed Continuous Improvement: Alerts sampled through BTL are analyzed for missed cases and used to fine-tune model thresholds and retraining processes.
-
-No Blind Spots Introduced: By maintaining coverage through ring-fencing and BTL sampling, the institution retains visibility into lower-scoring alerts without overwhelming the operational team.
-
+Please let me know if you would like access to any specific documentation ahead of audit preparation.
 
 
 ---
 
-Let me know if you'd like to support this with a table or chart showing SAR conversion rates at different score bands, or if you need this adapted for a compliance or ops audience.
+Let me know if you’d like to tailor the tone or detail further.
 
