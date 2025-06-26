@@ -1,25 +1,27 @@
-Here's a clear and professional draft you can use in response to the query:
+Got it — you're looking for concise bullet-point rules that can be enforced (or at least communicated) to your team. Here's a clean and strict set you can customize and share:
 
 
 ---
 
-Thank you for your message.
+🔒 Cluster Usage Rules
 
-Yes, there is a structured testing and governance framework in place to confirm the reliability of the new approach:
+⚠️ Max Resource Usage: No single user may consume more than 25% of total cluster resources (CPU/memory) at any time, unless explicitly approved in advance.
 
-The BUK Retail ML model has been validated by IVU in line with MRM guidelines.
+🕐 Job Duration Limit: Any job running longer than 12 hours will be automatically terminated unless pre-approved.
 
-We conduct quarterly monitoring to assess model performance and stability.
+💤 Idle Jobs: Jobs idle for more than 30 minutes will be terminated automatically.
 
-In addition, monthly governance sessions are held to review the low-risk sampling approach. These cover key areas such as guardrails, BTL testing, score stability, and model performance.
+🚫 High-Usage Job Termination: Jobs using more than 30% of total resources for over 1 hour without approval will be killed to ensure fairness.
 
-Our processes are fully documented, including the controls implemented to ensure consistent execution. This also outlines escalation procedures for any deviations, including data quality issues and reconciliation gaps.
+📆 Advance Booking: Large jobs (e.g., >8 cores or >4 GPUs) must be booked in advance via the team scheduler or Slack channel.
 
+🧾 Mandatory Tagging: All jobs must include tags: owner, team, and purpose. Untagged jobs may be terminated without warning.
 
-Please let me know if you would like access to any specific documentation ahead of audit preparation.
+🔄 Review Period: Cluster usage will be reviewed weekly. Repeat offenders may be temporarily blocked from launching new jobs.
+
 
 
 ---
 
-Let me know if you’d like to tailor the tone or detail further.
+Would you like this exported as a PDF/poster or posted automatically to a team Slack channel every Monday as a reminder? I can also help you enforce these rules programmatically (e.g., in Databricks or Kubernetes).
 
