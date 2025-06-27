@@ -1,27 +1,113 @@
-Got it — you're looking for concise bullet-point rules that can be enforced (or at least communicated) to your team. Here's a clean and strict set you can customize and share:
+Here’s a well-structured interview guide for Dr. Mark Pinches, focusing first on his work at Barclays and recent roles, before diving into technical depth, governance/risk, and problem-solving ability.
 
 
 ---
 
-🔒 Cluster Usage Rules
+🔹 INTRODUCTORY QUESTIONS (Experience Overview)
 
-⚠️ Max Resource Usage: No single user may consume more than 25% of total cluster resources (CPU/memory) at any time, unless explicitly approved in advance.
+Start by setting a relaxed tone, then explore key achievements:
 
-🕐 Job Duration Limit: Any job running longer than 12 hours will be automatically terminated unless pre-approved.
+Barclays & Recent Experience:
 
-💤 Idle Jobs: Jobs idle for more than 30 minutes will be terminated automatically.
+1. Can you walk me through your role at Barclays, especially the data science innovation work you led?
 
-🚫 High-Usage Job Termination: Jobs using more than 30% of total resources for over 1 hour without approval will be killed to ensure fairness.
 
-📆 Advance Booking: Large jobs (e.g., >8 cores or >4 GPUs) must be booked in advance via the team scheduler or Slack channel.
+2. You mention delivering time series models and reducing business impact during outages. Can you elaborate on the business problem and how you approached the solution?
 
-🧾 Mandatory Tagging: All jobs must include tags: owner, team, and purpose. Untagged jobs may be terminated without warning.
 
-🔄 Review Period: Cluster usage will be reviewed weekly. Repeat offenders may be temporarily blocked from launching new jobs.
+3. At Medicines Discovery Catapult, how did you integrate AI/ML into chemoinformatics and bioinformatics workflows?
+
+
+4. You’ve held leadership roles across multiple sectors—how do you tailor your data science strategy for different industries?
+
 
 
 
 ---
 
-Would you like this exported as a PDF/poster or posted automatically to a team Slack channel every Monday as a reminder? I can also help you enforce these rules programmatically (e.g., in Databricks or Kubernetes).
+🔹 TECHNICAL DEEP DIVE
+
+PyTorch & ML Models:
+
+5. What’s your experience working with PyTorch in production? Any examples of custom architectures or training optimization challenges you’ve faced?
+
+
+6. You mention using variational autoencoders (VAEs). What was the use case, and how did you evaluate their effectiveness?
+
+
+7. How do you handle time series modeling—do you lean toward deep learning or classical statistical models, and why?
+
+
+
+Spark & Big Data:
+
+8. Can you describe how you used Spark for anomaly detection in sensor data? What were some of the scalability challenges?
+
+
+9. Have you used Spark MLlib, or do you generally use Spark for data prep before training models in another framework like PyTorch?
+
+
+10. What tools do you use for managing data pipelines at scale (e.g., Airflow, Delta Lake, etc.)?
+
+
+
+AWS / Databricks / SageMaker:
+
+11. What’s your experience with AWS services—have you used SageMaker for model development or deployment?
+
+
+12. Have you worked with Databricks? If so, how did it support your ML workflow—feature engineering, experiment tracking, or deployment?
+
+
+13. Can you compare using Databricks notebooks vs traditional notebooks or IDEs in terms of team collaboration and governance?
+
+
+
+
+---
+
+🔹 GOVERNANCE, DATA QUALITY & RISK MANAGEMENT
+
+14. You’ve built data validation frameworks—can you walk through the key components and how they ensure data integrity?
+
+
+15. How do you track model drift or performance degradation in production environments?
+
+
+16. Tell me about a time when you had to defend model decisions to a regulatory body or internal risk team. How did you approach it?
+
+
+17. How do you manage model documentation and audit trails, particularly in regulated settings like finance or pharma?
+
+
+
+
+---
+
+🔹 INDEPENDENCE & INNOVATIVE THINKING
+
+18. Describe a time when you proposed a completely new approach that went against the status quo. What was the outcome?
+
+
+19. How do you stay up to date with the latest developments in AI and decide what to experiment with?
+
+
+20. Imagine you join a team with poor data quality and no model monitoring—what would your first 30 days look like?
+
+
+21. If you were tasked with solving an environmental or fraud-related problem but had limited labeled data, how would you approach the modeling process?
+
+
+
+
+---
+
+Let me know if you'd like:
+
+A condensed list for panel interview use
+
+A technical evaluation scoring sheet
+
+Follow-up questions based on their answers during the interview
+
 
