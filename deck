@@ -1,24 +1,31 @@
-Here’s a well-structured interview guide for Dr. Mark Pinches, focusing first on his work at Barclays and recent roles, before diving into technical depth, governance/risk, and problem-solving ability.
+Here's a custom interview guide for Ritesh Kumar Paryani, structured around his most relevant experience, technical stack, governance exposure, and independence. The focus is on assessing his fit for a senior technical data science role, especially with cloud-based ML systems, compliance-heavy environments, and LLM-based automation.
 
 
 ---
 
 🔹 INTRODUCTORY QUESTIONS (Experience Overview)
 
-Start by setting a relaxed tone, then explore key achievements:
+Recent Work at Amazon:
 
-Barclays & Recent Experience:
-
-1. Can you walk me through your role at Barclays, especially the data science innovation work you led?
+1. Can you walk us through the BI platform you’ve built at Amazon Ads? What were the biggest challenges in scaling and automating analytics across such a large user base?
 
 
-2. You mention delivering time series models and reducing business impact during outages. Can you elaborate on the business problem and how you approached the solution?
+2. You mentioned integrating LLM-based self-serve tools—what’s an example of a real business problem this helped solve?
 
 
-3. At Medicines Discovery Catapult, how did you integrate AI/ML into chemoinformatics and bioinformatics workflows?
+3. You delivered $500K in platform cost efficiency—what were the technical or architectural decisions that contributed to this?
 
 
-4. You’ve held leadership roles across multiple sectors—how do you tailor your data science strategy for different industries?
+4. How did you collaborate across product, engineering, and data science in your role?
+
+
+
+Barclays Experience:
+
+5. At Barclays, you worked across compliance, fraud, and risk analytics. What was the most complex or sensitive use case you worked on?
+
+
+6. Can you share how you built and maintained compliance models? How did you validate and monitor them?
 
 
 
@@ -27,76 +34,80 @@ Barclays & Recent Experience:
 
 🔹 TECHNICAL DEEP DIVE
 
-PyTorch & ML Models:
+Cloud & AWS:
 
-5. What’s your experience working with PyTorch in production? Any examples of custom architectures or training optimization challenges you’ve faced?
-
-
-6. You mention using variational autoencoders (VAEs). What was the use case, and how did you evaluate their effectiveness?
+7. You list AWS Glue, S3, Kinesis, Redshift, EC2, etc. Can you describe a typical ML or BI pipeline you’ve deployed on AWS?
 
 
-7. How do you handle time series modeling—do you lean toward deep learning or classical statistical models, and why?
+8. Have you used AWS SageMaker for model training or hosting? If so, what was your experience with experiment tracking, pipelines, and model registry?
 
 
-
-Spark & Big Data:
-
-8. Can you describe how you used Spark for anomaly detection in sensor data? What were some of the scalability challenges?
-
-
-9. Have you used Spark MLlib, or do you generally use Spark for data prep before training models in another framework like PyTorch?
-
-
-10. What tools do you use for managing data pipelines at scale (e.g., Airflow, Delta Lake, etc.)?
+9. How do you monitor cost and performance trade-offs in cloud-based systems, especially for data-heavy applications?
 
 
 
-AWS / Databricks / SageMaker:
+Big Data, PySpark & ETL:
 
-11. What’s your experience with AWS services—have you used SageMaker for model development or deployment?
-
-
-12. Have you worked with Databricks? If so, how did it support your ML workflow—feature engineering, experiment tracking, or deployment?
+10. You’ve worked with Spark and PySpark. How did you use these in the context of building ETL pipelines or preparing training data?
 
 
-13. Can you compare using Databricks notebooks vs traditional notebooks or IDEs in terms of team collaboration and governance?
+11. What’s your approach to optimizing Spark jobs for large-scale feature engineering or batch scoring?
+
+
+12. Have you handled schema drift or data inconsistencies at scale? How did you manage schema enforcement in Spark or Glue?
 
 
 
+ML & AI:
 
----
-
-🔹 GOVERNANCE, DATA QUALITY & RISK MANAGEMENT
-
-14. You’ve built data validation frameworks—can you walk through the key components and how they ensure data integrity?
+13. You mention experience with fraud detection, CLV, and segmentation. Can you talk about one ML model you took end-to-end—from business framing to monitoring in production?
 
 
-15. How do you track model drift or performance degradation in production environments?
+14. What’s your experience with supervised vs unsupervised techniques in fraud or anomaly detection?
 
 
-16. Tell me about a time when you had to defend model decisions to a regulatory body or internal risk team. How did you approach it?
-
-
-17. How do you manage model documentation and audit trails, particularly in regulated settings like finance or pharma?
+15. For LLMs, you mention using multi-modal and toxicity filters. Can you explain how you implemented these and how you evaluated them?
 
 
 
 
 ---
 
-🔹 INDEPENDENCE & INNOVATIVE THINKING
+🔹 GOVERNANCE, COMPLIANCE & RISK
 
-18. Describe a time when you proposed a completely new approach that went against the status quo. What was the outcome?
-
-
-19. How do you stay up to date with the latest developments in AI and decide what to experiment with?
+16. You’ve worked in compliance-heavy domains (GDPR, AML, risk). How do you ensure that your models remain auditable and compliant over time?
 
 
-20. Imagine you join a team with poor data quality and no model monitoring—what would your first 30 days look like?
+17. What processes do you follow to document your models for internal audit or regulatory review?
 
 
-21. If you were tasked with solving an environmental or fraud-related problem but had limited labeled data, how would you approach the modeling process?
+18. How do you approach data privacy, especially when handling sensitive customer or financial information?
 
+
+
+
+---
+
+🔹 INDEPENDENCE & INNOVATION
+
+19. You seem to have taken a proactive role in cross-functional alignment and platform definition. Can you give an example of where you independently proposed and delivered an innovative solution?
+
+
+20. Imagine you join a team with messy, undocumented pipelines and unclear ownership. What would be your first steps?
+
+
+21. You’ve worked across several domains—how do you adapt your analytics strategy when you’re dealing with a domain that’s new to you (e.g., advertising vs compliance)?
+
+
+
+
+---
+
+Optional Closing Questions
+
+What tools or techniques are you currently exploring or excited about in the AI/ML space?
+
+If given full ownership of a high-risk model that powers decisions worth millions, how would you design the governance and monitoring system around it?
 
 
 
@@ -104,10 +115,10 @@ AWS / Databricks / SageMaker:
 
 Let me know if you'd like:
 
-A condensed list for panel interview use
+Candidate comparison sheet
 
-A technical evaluation scoring sheet
+Interview summary template
 
-Follow-up questions based on their answers during the interview
+Follow-up prompts based on their answers
 
 
