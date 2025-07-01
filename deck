@@ -1,27 +1,29 @@
-Here’s a structured and constructive version of your feedback for Anthony that acknowledges strengths while clearly identifying areas for improvement and support:
+Here is a structured and constructive version of your feedback for Liam, with a balance of recognition, guidance, and encouragement for growth:
 
 
 ---
 
-Anthony – Mid-Year Feedback
+Liam – Mid-Year Feedback
 
-What’s going well: Anthony has made strong contributions in the first half of the year, particularly with the transaction monitoring model and the upcoming BB model. These are meaningful deliverables that reflect solid technical capability. Despite a demanding workload, Anthony managed the handover to Salma professionally and effectively — the time spent walking her through the details was clearly appreciated and helped set her up for success.
+What’s going well: Liam has delivered solid work in H1, with notable contributions such as the Debit v3 improvements and resolution of several complex issues. His efforts have not gone unnoticed — he’s been recognised both within the team and by colleagues across teams for his reliability and willingness to help. His strong understanding of business needs consistently informs the value of his technical work.
 
-Areas to build on: There are a few areas where continued growth would make a big difference:
+Areas to build on: Liam has expressed a clear aspiration to take on a leadership role, and that potential is certainly there. To take the next step, a few areas will need attention:
 
-Commitment vs. Delivery: While the ambition is appreciated, timelines are often adjusted due to over-commitment. A more realistic approach to scoping and planning would help build confidence in delivery.
+Leadership and Delegation: Liam often prefers to fix issues himself, which can limit others’ growth and create a bottleneck. Developing confidence in delegation and focusing on empowerment will be key to building leadership credibility.
 
-Code Efficiency: There’s room to invest more time in code optimization and exploring more efficient or scalable solutions. This would help long-term maintainability and performance.
+Operational Management: The opportunity to drive day-to-day management improvements in the fraud area — such as Jira housekeeping or better framework adoption — hasn’t yet materialised. This is a space where a more structured and proactive approach could have real impact.
 
-Proactivity in Platform Changes: For example, being more proactive around initiatives like the Kubernetes migration could have helped avoid some of the challenges we’re now facing.
+Tool Development vs. Reusability: There’s a tendency to create new tools rather than enhancing and evolving existing ones. Given Liam’s deep understanding of business needs, this is a missed opportunity to build scalable and transferrable solutions that benefit the wider team.
 
-Prioritisation: Balancing competing demands remains a challenge. Clarifying what’s most impactful and urgent would help ensure effort is spent where it matters most.
+Adoption of Best Practices: The work on LTM was an opportunity for leadership that didn’t fully land, and there are early signs that the same might happen with MLOps. Raising valid concerns is important, but to lead in this space, there needs to be clear commitment to adopting modern practices and driving change — even when it means stepping outside of familiar territory.
+
+Openness to Change: For someone aiming to lead, embracing change and thinking about the broader team benefit is essential. Pushing back on tools like Apache Airflow, for example, should be balanced with a willingness to explore and champion what’s best for the team and the future of the platform.
 
 
-Support moving forward: One thing I’ve picked up on is that Anthony may feel somewhat disconnected from the wider team. That’s something I want to address — it’s important that everyone feels included and connected to the broader mission. We’ll work together on this to create more opportunities for engagement and ensure the right level of support is in place.
+Support moving forward: Liam has a lot to bring to the table and shows the right instincts to grow into a leadership role. The focus now should be on becoming more proactive in driving adoption, thinking beyond immediate solutions, and stepping confidently out of his comfort zone. I’m here to support that journey and look forward to seeing him shape the future direction of our engineering practices.
 
 
 ---
 
-Let me know if you want to tweak the tone, shorten it, or add goals for H2.
+Let me know if you'd like a version tailored specifically for a one-on-one conversation or for written performance documentation.
 
