@@ -1,26 +1,27 @@
-Here's a professional and clear email you can send:
+Here’s a structured and constructive version of your feedback for Anthony that acknowledges strengths while clearly identifying areas for improvement and support:
 
 
 ---
 
-Subject: Proposal to Use GitLab CI/CD to Meet ASDS CC Control
+Anthony – Mid-Year Feedback
 
-Hi [Team/All],
+What’s going well: Anthony has made strong contributions in the first half of the year, particularly with the transaction monitoring model and the upcoming BB model. These are meaningful deliverables that reflect solid technical capability. Despite a demanding workload, Anthony managed the handover to Salma professionally and effectively — the time spent walking her through the details was clearly appreciated and helped set her up for success.
 
-I hope you're well.
+Areas to build on: There are a few areas where continued growth would make a big difference:
 
-We're currently using the tool GGG to satisfy the ASDS CC control. I’m exploring the possibility of transitioning to GitLab CI/CD for this purpose. My understanding is that as long as we clearly document our approach and can evidence that the testing process remains consistent across tools, there should be no issue with this change from a compliance perspective.
+Commitment vs. Delivery: While the ambition is appreciated, timelines are often adjusted due to over-commitment. A more realistic approach to scoping and planning would help build confidence in delivery.
 
-Before proceeding further, I’d like to gather your views on this—particularly around any risks, dependencies, or other considerations we should keep in mind. If anyone is aware of any constraints that would prevent us from using GitLab CI/CD in place of GGG, please let me know.
+Code Efficiency: There’s room to invest more time in code optimization and exploring more efficient or scalable solutions. This would help long-term maintainability and performance.
 
-Happy to discuss further if needed.
+Proactivity in Platform Changes: For example, being more proactive around initiatives like the Kubernetes migration could have helped avoid some of the challenges we’re now facing.
 
-Best regards,
-[Your Name]
-[Your Role]
+Prioritisation: Balancing competing demands remains a challenge. Clarifying what’s most impactful and urgent would help ensure effort is spent where it matters most.
+
+
+Support moving forward: One thing I’ve picked up on is that Anthony may feel somewhat disconnected from the wider team. That’s something I want to address — it’s important that everyone feels included and connected to the broader mission. We’ll work together on this to create more opportunities for engagement and ensure the right level of support is in place.
 
 
 ---
 
-Let me know if you'd like a version tailored for a specific audience (e.g. compliance, engineering, management).
+Let me know if you want to tweak the tone, shorten it, or add goals for H2.
 
