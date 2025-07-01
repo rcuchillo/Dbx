@@ -1,115 +1,26 @@
-Based on the CV of Dr. Mark Pieroni, here’s a tailored interview guide structured to evaluate his suitability for a senior data science role with a focus on cyber fraud, infrastructure design, applied ML, governance, and independent innovation.
+Here's a professional and clear email you can send:
 
 
 ---
 
-🔹 INTRODUCTORY QUESTIONS (Background & Role Understanding)
+Subject: Proposal to Use GitLab CI/CD to Meet ASDS CC Control
 
-Barclays Role – Cybercrime Data Scientist:
+Hi [Team/All],
 
-1. Can you walk us through your current role at Barclays and how you balance applied machine learning, fraud analytics, and infrastructure development?
+I hope you're well.
 
+We're currently using the tool GGG to satisfy the ASDS CC control. I’m exploring the possibility of transitioning to GitLab CI/CD for this purpose. My understanding is that as long as we clearly document our approach and can evidence that the testing process remains consistent across tools, there should be no issue with this change from a compliance perspective.
 
-2. What are some of the most impactful outcomes from your work on mule fraud control optimisation?
+Before proceeding further, I’d like to gather your views on this—particularly around any risks, dependencies, or other considerations we should keep in mind. If anyone is aware of any constraints that would prevent us from using GitLab CI/CD in place of GGG, please let me know.
 
+Happy to discuss further if needed.
 
-3. You’ve worked across data science, fraud risk, and cyber threat intelligence—how do you prioritize which problems to tackle, and what does success look like?
-
-
-
-
----
-
-🔹 TECHNICAL DEEP DIVE
-
-Machine Learning & PyTorch:
-
-4. Can you tell us about the ML models you've built for fraud detection—what architectures did you use, and why?
-
-
-5. You mentioned deploying models to production. What frameworks and tools did you use to support reproducibility and monitoring (e.g., MLflow, DVC)?
-
-
-6. Have you used PyTorch in production? If so, what kinds of models or pipelines did you build, and how did you ensure scalability and maintainability?
-
-
-
-Spark & Infrastructure:
-
-7. You talk about orchestrating ETL with Dask and Spark—can you explain how you integrated these tools in your fraud pipeline?
-
-
-8. How do you manage version control and testing for large-scale ETL or model training workflows?
-
-
-9. Did your team adopt Databricks or AWS tools like Glue, SageMaker, or EMR for these pipelines? If so, how was your experience?
-
-
-
-Deployment & Cross-Team Tooling:
-
-10. You’ve implemented CI/CD for ML workflows—what were the biggest challenges, and how did you solve them?
-
-
-11. How do you handle collaboration across cyber, data science, and engineering teams, particularly when building shared tools and pipelines?
-
-
+Best regards,
+[Your Name]
+[Your Role]
 
 
 ---
 
-🔹 GOVERNANCE, RISK & COMPLIANCE
-
-12. How do you ensure that the ML models you develop remain compliant with internal and external audit requirements?
-
-
-13. Can you describe how you track and report on model performance and risk over time?
-
-
-14. When working on fraud-related models, how do you ensure explainability and defensibility of predictions to business stakeholders or regulators?
-
-
-15. Have you ever faced a situation where a deployed model failed or drifted significantly? How did you handle it?
-
-
-
-
----
-
-🔹 INDEPENDENCE & STRATEGIC THINKING
-
-16. You mention building your own frameworks and processes—can you describe a time when you initiated a new approach without being asked?
-
-
-17. How do you align your technical strategy with broader business objectives, particularly when you're dealing with evolving cyber threats?
-
-
-18. Imagine you were dropped into a completely new domain with no labeled data, limited compute resources, and pressure to deliver fast—how would you approach solving that problem?
-
-
-19. How do you stay up to date with the latest developments in AI, cybersecurity, and data tooling—and how do you determine what’s worth experimenting with?
-
-
-
-
----
-
-Optional Follow-Ups
-
-What tooling or architecture decisions have you made that significantly improved operational efficiency or fraud detection accuracy?
-
-Which projects are you most proud of, and why?
-
-
-
----
-
-Let me know if you’d like:
-
-A scorecard with weighted categories
-
-Panel format breakdowns (e.g., technical, stakeholder, innovation)
-
-Scenario-based case questions (e.g., fraud investigation simulation or architecture troubleshooting)
-
+Let me know if you'd like a version tailored for a specific audience (e.g. compliance, engineering, management).
 
