@@ -1,2 +1,82 @@
-This business application supports the end-to-end development of machine learning models, from data preparation to deployment. It enables teams to build, track, and monitor models efficiently, ensuring scalability and governance. The platform accelerates time-to-value by streamlining workflows and improving model performance across business use cases.
+Thanks, that helps clarify things. Here's a refined version of your answers specifically tailored to the context of developing ML models for economic crime detection, such as fraud and financial crime:
+
+
+---
+
+1.1 What is the purpose of this activity?
+
+The purpose of this activity is to process personal data to develop and improve machine learning models that detect economic crime, including fraud and financial crime. These models analyze transaction patterns and behavioral data to identify potentially suspicious or illegal activity. This supports Barclays in meeting regulatory obligations, protecting customers from financial loss, and maintaining the integrity of the financial system.
+
+
+---
+
+1.2 Are there any wider public benefits to the processing of personal data to meet this purpose?
+
+Yes. Detecting and preventing financial crime protects not only individual customers but also the wider financial system. Key public benefits include:
+
+Reducing the risk of customers being defrauded or financially harmed.
+
+Supporting law enforcement and regulatory compliance efforts.
+
+Strengthening trust in digital banking and financial services.
+
+
+This contributes to overall economic stability and helps prevent broader criminal activities funded through financial crime.
+
+
+---
+
+2.1 Why is it necessary to use personal data to achieve the purpose(s) identified above?
+
+The use of personal data is essential for training and evaluating models that detect fraudulent or suspicious behavior. ML models rely on patterns within individual transaction histories, customer behavior, and contextual data to detect anomalies. Without access to personal data:
+
+The models cannot learn patterns specific to fraudulent activity.
+
+False positives and negatives would increase, reducing model effectiveness.
+
+It would be impossible to adapt detection logic to changing fraud tactics.
+
+
+Anonymized or generic data would not enable the same accuracy or responsiveness in crime prevention.
+
+
+---
+
+3.1 Consider the impact on individuals’ interests and rights and freedoms and assess whether this overrides Barclays’ legitimate interests.
+
+Processing is done with strong safeguards to protect individual rights:
+
+Data is used strictly for security and crime prevention purposes.
+
+Individuals are informed of the use of their data via privacy notices.
+
+Data is handled securely and subject to access controls.
+
+Customers retain rights such as access, correction, and objection where applicable.
+
+
+Given the significant benefits of detecting and preventing fraud, and the mitigations in place, the legitimate interest of Barclays does not override the rights and freedoms of individuals.
+
+
+---
+
+3.2 Could the interests of impacted data subjects override the legitimate interests of the business if the data is processed in unexpected ways?
+
+The processing aligns with customers’ expectations that their bank will protect them from fraud and financial crime. Use of data for crime detection is clearly stated in privacy notices and is directly linked to services provided.
+
+However, if data were used for unrelated profiling or commercial purposes, this could override the legitimate interest. We regularly review model use cases and update our privacy notices and risk assessments to ensure continued alignment with individuals’ reasonable expectations.
+
+
+---
+
+3.3 Will processing of personal data result in negative impacts to individuals that would override the business’s legitimate interest?
+
+While model outputs could occasionally result in transactions being delayed, blocked, or subject to further review, these actions serve to protect individuals from financial crime. Where appropriate, appeals or manual reviews are in place to minimize negative consequences.
+
+The overall benefit—protection from fraud and supporting crime prevention—justifies limited and proportionate impacts. The data processed does not include special category data unless absolutely necessary and justified with appropriate safeguards.
+
+
+---
+
+Let me know if you'd like help compiling this into a formal document or tailoring it to a specific ML model or fraud scenario.
 
