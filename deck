@@ -1,25 +1,2 @@
-Here is a structured and constructive version of your feedback for Great, highlighting her strengths and providing clear, encouraging guidance for development:
-
-
----
-
-Great – Mid-Year Feedback
-
-What’s going well: Great has made a strong contribution in the first half of the year, particularly by stepping up to maintain her Jira board in Kate’s absence. She’s built a solid relationship with the governance team and has been diligent in staying ahead of upcoming submissions. Her willingness to engage with new tools — being the first to trial tutorials on Kubernetes and Apache Airflow — reflects a proactive and collaborative mindset. She brings positive energy to the team, and that has not gone unnoticed. The quality of her documentation has also improved significantly, which adds real value for the team.
-
-Areas to build on: To build on this momentum, there are a few areas where Great can increase her impact:
-
-Pace and Ownership: The corporate PoC has moved slower than expected. Great has the technical capability to lead on this, and the next step is building the confidence to take more ownership — especially when progress stalls. Proactively identifying blockers and pushing things forward independently will help her make an even stronger impact.
-
-Speaking Up and Being Proactive: When a project isn’t progressing as expected, it’s important to feel empowered to raise concerns or propose alternatives. Developing that assertiveness will be key to driving more effective delivery.
-
-Model Development Mindset: The issue with the retail model refresh could have been flagged earlier, or mitigated with basic controls. Going forward, adopting a mindset of continuous improvement — ensuring our ways of working evolve as we build — will be critical. This includes implementing checks, anticipating risks, and actively suggesting process improvements.
-
-
-Support moving forward: Great has shown strong collaboration, adaptability, and enthusiasm. With a bit more confidence in her technical ability and a proactive mindset, she can take on larger pieces of work and shape the way we develop and deliver models. I’m looking forward to seeing her continue to grow and take more initiative in the second half of the year.
-
-
----
-
-Let me know if you'd like a shorter version or one framed around specific development goals.
+Dr. Mark Pinches is a technically strong candidate with deep expertise in end-to-end machine learning, including LLMs, time series, anomaly detection, and causal deep learning, applied across regulated sectors such as life sciences, environmental monitoring, and financial services. He has hands-on experience with MLOps principles, cloud platforms (AWS, Azure), and geospatial data systems (ArcGIS), and has led the development of scalable, production-grade AI solutions. Notably, he has driven innovation in model development frameworks, emphasizing code reuse and governance, and has demonstrated exposure to model risk and model governance practices through his leadership roles in highly regulated environments. Strongly recommend on technical grounds.
 
