@@ -1,2 +1,25 @@
 Dr. Mark Pinches is a technically strong candidate with deep expertise in end-to-end machine learning, including LLMs, time series, anomaly detection, and causal deep learning, applied across regulated sectors such as life sciences, environmental monitoring, and financial services. He has hands-on experience with MLOps principles, cloud platforms (AWS, Azure), and geospatial data systems (ArcGIS), and has led the development of scalable, production-grade AI solutions. Notably, he has driven innovation in model development frameworks, emphasizing code reuse and governance, and has demonstrated exposure to model risk and model governance practices through his leadership roles in highly regulated environments. Strongly recommend on technical grounds.
 
+Here is the technical interview feedback for Ritesh Kumar Paryani, based on the attached CV and your comments, with a “Do Not Recommend” rating:
+
+
+---
+
+Technical Feedback – Ritesh Kumar Paryani
+
+Ritesh brings strong industry experience, particularly within Amazon and Barclays, and has demonstrated proficiency with a wide array of AWS services including SageMaker, Glue, Kinesis, Redshift, and EC2. His profile highlights valuable exposure to LLM-based platforms, analytics infrastructure, and compliance-related use cases, particularly in fraud detection and AML contexts. However, beyond AWS tooling, his understanding of the broader ML ecosystem—such as model development frameworks, advanced ML techniques, or orchestration tools—is relatively limited. In discussion, there was little evidence of ability to independently shape an ML initiative end-to-end, including defining the problem, designing the solution architecture, and driving model delivery. His work appears more embedded in pre-defined frameworks or tooling environments, which may limit adaptability in less structured or highly strategic roles. While technically capable in platform operations, he lacks the depth in core ML methodology and project leadership that would be expected at this level.
+
+Recommendation: Do Not Recommend on technical grounds.
+
+
+Thank you for the clarification. Here's the updated technical interview feedback for Mark (second candidate) with a Do Not Recommend rating, incorporating your points:
+
+
+---
+
+Technical Feedback – Mark (Second Candidate)
+
+Mark is a technically capable candidate with solid experience across data science, statistical modeling, and AI/ML workflows. His background reflects depth in core concepts such as model development, analytics tooling, and domain-relevant applications. He clearly possesses the technical foundation to contribute effectively to established data science teams. However, during the interview, he was unable to demonstrate the level of independent thinking, initiative, or critical reasoning expected for a senior R&D-focused role. When asked about shaping new ideas or exploring open-ended problems, responses lacked the clarity and leadership mindset needed to drive innovation in a research environment. While he would likely perform well in a delivery or supporting role, he does not currently meet the bar for leading or pioneering new technical directions.
+
+Recommendation: Do Not Recommend for a senior R&D position.
+
