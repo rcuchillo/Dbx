@@ -1,19 +1,23 @@
-Here’s a clear and professional draft reply you can use:
+Here's a polished and executive-toned draft for your reply that communicates firmness, clarity, and a de-escalating tone with Rich:
 
 
 ---
 
-Subject: Re: Model Refresh - Benefits
+Subject: Re: Mules Models Ownership Transfer and PB Implementation
 
-Hi Dan,
+Hi Rich,
 
-Thanks for sharing the plan, and apologies for the delay in getting back to you.
+Thanks for the note – I completely appreciate the frustration here, and I’ve taken some time to catch up with the team to get a full view of the background, as I wasn’t across all previous conversations.
 
-I’m glad to see that we’re exploring the option of recalibrating the model between retrains. Even if a fortnightly cadence might be difficult to sustain in the long run, it’s definitely a step in the right direction. That said, if we don’t run a backtest to validate the impact of each calibration, we’ll still need to confirm implementation accuracy—perhaps by releasing in shadow for a day or two before moving straight to production.
+As you noted, the £50k funding was secured over a year ago, but due to the Cloudera exit, EDP weren’t in a position to prioritise the work at the time. From what I understand now, EDP are willing to support a tactical deployment, but they’ve been consistently clear that Fraud Tech would need to take long-term ownership – and that clarity on the handover plan and timeline is still pending.
 
-On the benefits side, I had a chat with Liam last week. My view is that we should frame the analysis around the cost of doing nothing. One approach would be to pick an example where a model remained in production for an extended period and showed clear signs of performance degradation. The expectation would be that a refresh brings performance back in line with target levels. We could then extrapolate what the performance would likely have looked like over the following 3 to 6 months had the model not been refreshed. The delta from this exercise gives us a tangible measure of the opportunity cost of inaction.
+Ownership has been a recurring theme for several months, and both of us have been included in conversations with Natasha and Sonali since September last year. I also understand Anthony has made repeated efforts to bridge EDP and Fraud Tech to get this moving, but discussions have largely gone in circles.
 
-Happy to discuss further if helpful.
+At this point, my view is that the path forward is for EDP to proceed with implementation, contingent on Fraud Tech agreeing to take over ownership. If this needs to be escalated, it may be more appropriate on the Fraud Tech side – though I’m happy to be challenged on that if there’s a different perspective.
+
+Chetan is back tomorrow and I’ll connect with him directly, but I’ve already had confirmation from his team that the code is ready for testing and they’re happy to support – provided the ownership question is resolved.
+
+Let’s align on next steps once I’ve spoken with Chetan.
 
 Best regards,
 [Your Name]
@@ -21,5 +25,5 @@ Best regards,
 
 ---
 
-Let me know if you'd like to adjust the tone or make it more concise or assertive.
+Let me know if you'd like to add a call to action or tweak the tone further.
 
