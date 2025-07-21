@@ -1,124 +1,20 @@
-Based on the CV of Mani Ayodhya, here is a tailored interview guide structured to cover his experience in financial services analytics, deep technical competencies in Python/SQL/ML, work in risk/compliance (e.g., MIFID II), and independent strategic problem solving.
+Here's a professional reply you can use:
 
 
 ---
 
-🔹 INTRODUCTORY QUESTIONS (Experience & Leadership)
+Subject: Re: Ownership Transfer and Strategic Delivery
 
-Current Role – Citi (AVP, Data Analytics):
+Hi Christian,
 
-1. Can you walk us through your current role at Citi and the main business problems you’re solving with data science?
+Thanks for the detailed update.
 
+The tactical use of the PB model as you’ve outlined does make sense, especially to avoid any gaps while the strategic work is still ongoing.
 
-2. You mentioned a 90% accuracy rate in fraud detection using ML—what techniques or models were most effective in reaching that level?
+Do you know if the EDP team is in a position to deliver the tactical data pipeline to support this approach? That would help us assess the viability of progressing in parallel without waiting on the full strategic delivery.
 
+Appreciate the continued coordination.
 
-3. How do you approach managing model development within a highly regulated and cross-functional environment?
-
-
-4. What’s your role in stakeholder engagement, and how do you ensure your insights influence business decisions?
-
-
-
-Prior Roles – Lloyds & Moneycorp:
-
-5. At Lloyds, you worked on predictive fraud models and pipeline automation—can you share details on the architecture and tooling used?
-
-
-6. In your time at Moneycorp, how did you handle time-series FX/swaps data modeling? What specific ML models and validation approaches were used?
-
-
-
-
----
-
-🔹 TECHNICAL DEEP DIVE
-
-Programming & ML (Python, SQL, TensorFlow):
-
-7. You’ve built models using TensorFlow and Python—can you walk us through an end-to-end ML pipeline you developed, from feature engineering to monitoring?
-
-
-8. What are some of the challenges you've faced when using neural networks or ensemble models in production?
-
-
-9. How do you manage and validate time-series models in fraud or trading applications?
-
-
-
-Data Engineering & ETL:
-
-10. You've handled ETL pipelines using Spark and SQL—can you explain your strategy for cleaning, transforming, and joining large datasets (100M+ records)?
-
-
-11. Have you worked on pipeline orchestration? What tools or frameworks (e.g., Airflow, Prefect) have you used to automate workflows?
-
-
-12. How do you ensure data quality and integrity when working with unstructured or mixed-format data sources?
-
-
-
-Visualization & Reporting:
-
-13. You mention using Tableau extensively—how do you design dashboards that are actionable for senior stakeholders in compliance and risk?
-
-
-14. Have you built any real-time dashboards or alerting systems for fraud or anomaly detection? If so, what tools and architecture were used?
-
-
-
-
----
-
-🔹 GOVERNANCE, COMPLIANCE & RISK
-
-15. You have experience with MIFID II and regulatory analytics—how do you build models and reports that are audit-ready and aligned with compliance standards?
-
-
-16. Can you give an example of a time when you had to defend or explain a model to risk or compliance stakeholders?
-
-
-17. What role do you play in defining KPIs and metrics for regulatory reporting or internal controls?
-
-
-
-
----
-
-🔹 INDEPENDENCE, STRATEGIC THINKING & INNOVATION
-
-18. You’ve led global initiatives and worked across geographies—how do you approach prioritizing and driving analytical value across multiple teams?
-
-
-19. Describe a time when you proposed a data-driven solution that led to a strategic business impact. What made it successful?
-
-
-20. If you were given ambiguous requirements and messy data, how would you begin problem-solving?
-
-
-21. What motivates you to explore and experiment with new models or data science techniques?
-
-
-
-
----
-
-Optional Wrap-Up Questions
-
-Which technical project are you most proud of, and why?
-
-How do you stay current with evolving trends in fraud detection and machine learning?
-
-
-
----
-
-Let me know if you'd like:
-
-A structured scorecard for candidate evaluation
-
-Behavioral interview prompts
-
-Deep-dive coding or modeling challenge ideas for follow-up
-
+Best regards,
+Remi
 
