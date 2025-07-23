@@ -1,19 +1,17 @@
-Here's a professional and assertive reply you can use:
+Here's an improved version of your email for clarity, professionalism, and tone:
 
 
 ---
 
-Subject: Re: JR-0000039931 reward case
+Subject: Forecasting Approach and Model Risk Consideration
 
-Hi Amy,
+Hi Pritish,
 
-Thanks for your response.
+The approach has now been agreed. We will use Prophet to forecast data volumes, with a threshold-based mechanism layered on top to trigger alerts. These thresholds will be refined over time to reduce false positives while still capturing key events.
 
-To add to Deep's point, I would like to emphasise that the benchmark should not only consider the recent BA4 hire but also other team members at the same grade across the broader team. In addition, Archie brings a very high level of specialisation that is critical to our work.
+It's now clear that this setup does not fall under the model risk policy, as it is similar to what we currently have for FML (see attached), which was deemed out of scope for model risk.
 
-Given the scarcity of such skills in the market, it is highly unlikely that we would be able to attract or retain someone of Archie’s calibre in London for less than £60K. This level of expertise is not easily replaceable and should be recognised appropriately in the compensation recommendation.
-
-Grateful if you could consider this context in the review.
+That said, since this is a new tool we may apply more broadly if proven effective, we’ll document the full approach. I’m happy to share that with IVU once it’s ready.
 
 Best regards,
 [Your Name]
@@ -21,5 +19,5 @@ Best regards,
 
 ---
 
-Let me know if you’d like to soften or escalate the tone.
+Let me know if you'd like it to be more formal or simplified further.
 
