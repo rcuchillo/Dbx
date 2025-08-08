@@ -1,26 +1,30 @@
-Here’s the updated version with the arrival instructions:
+Here’s a concise summary of what’s working well and what could be improved based on the document:
 
 ---
 
-Subject: Welcome to the Team, Dorian!
+### ✅ **What’s Working Well:**
 
-Hi Dorian,
-
-I hope this message finds you well! I wanted to send a quick note to welcome you to the team. I’m currently on leave for the next couple of weeks, but Kate (who is cc'd) will be there to greet you and help you settle in on your first day.
-
-Please aim to arrive around 9:30 AM on Monday. When you get to the building, head to the main reception and ask for Kate Smith (G04654945). She’ll be there to help you get started.
-
-I’ve arranged a desk for you on Level 15 G3.08 for Monday, Wednesday, and Thursday. Our team’s anchor days are Wednesday and Thursday, so you’ll have a great chance to meet everyone and get up to speed on those days.
-
-Elliot (also cc’d) started a couple of months ago and has been shaping our MLOps roadmap. He will be setting up a catch-up with you soon to take you through where we are on our journey and share our priorities moving forward. A key priority at the moment is working with Liam on the handover of Athena to take our model refresh and model validation pipeline to the next level. The expectation is to migrate and likely refactor the tool to make it compatible with Airflow. I’m sure you’ll get more context on this during your discussions with the team.
-
-I’m really excited to have you join us, and while I’m away, I’m confident Kate and Elliot will be there to offer guidance and support.
-
-Looking forward to catching up when I’m back! In the meantime, best of luck settling in, and don't hesitate to reach out to Kate or Elliot if you need anything.
-
-Best regards,
-\[Your Name]
+* **Responsive and collaborative teams**, especially on recent BioCatch and Credit Redex workstreams.
+* **Strong relationships and informal communication**, making collaboration easy.
+* **Good understanding of each other’s work**, which helps with planning and change processes.
+* **High technical skills and domain knowledge** on both teams.
+* **Effective collaboration** between Quant and Analytics, especially when communication is regular.
+* **Focus on delivery** during frequent meetings, even if it adds pressure.
 
 ---
 
-This version includes all the necessary details about his arrival.
+### 🔧 **What Could Be Improved:**
+
+* **Need for a shared dashboard/tracker** to manage dependencies, blockers, and ownership—would boost transparency and accountability.
+* **Greater clarity on responsibilities**, especially with multiple services and stakeholders involved.
+* **More face time between teams**, particularly GCQA/FA meeting new joiners and aligning approaches.
+* **Consistency in tools and methodologies**, especially across Debit/Credit/retail portfolios.
+* **Better data and technology sharing**, e.g., using **Databricks** to centralize access and speed up development.
+* **Improve data consistency** by aligning on the same sources for model monitoring and FA.
+* **Establish feedback loops** post-model implementation.
+* **Enhance communication** between IVU and FA by sharing queries and documentation.
+* **Create a shared SharePoint space** for governance documents, including fairness analysis.
+
+---
+
+Let me know if you’d like this turned into a slide or a one-pager.
