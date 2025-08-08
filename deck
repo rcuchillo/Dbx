@@ -1,29 +1,26 @@
-Certainly — here's a slide-ready version with clear, articulate bullet points that highlight the key issues under Data Storage & Versioning:
-
-
----
-
-🔍 Current Issues in Data Storage & Versioning
-
-Storage constraints due to multiple copies of similar datasets
-
-No single source of truth, leading to confusion and inconsistency
-
-Difficult to track dataset versions, impacting reproducibility and governance
-
-Fragmented data use cases: separate datasets for monitoring, model refresh, rebuild, and validation
-
-Version sprawl across teams and projects with limited visibility or control
-
-Poor metadata practices, making lineage and auditing challenging
-
-Redundant processing and effort due to lack of centralized version management
-
-Risk of using outdated data in production or model retraining workflows
-
-
+Here’s the updated version with the arrival instructions:
 
 ---
 
-Let me know if you want to tailor this for a specific audience (e.g., technical vs. executive) or align it with a visual representation.
+Subject: Welcome to the Team, Dorian!
 
+Hi Dorian,
+
+I hope this message finds you well! I wanted to send a quick note to welcome you to the team. I’m currently on leave for the next couple of weeks, but Kate (who is cc'd) will be there to greet you and help you settle in on your first day.
+
+Please aim to arrive around 9:30 AM on Monday. When you get to the building, head to the main reception and ask for Kate Smith (G04654945). She’ll be there to help you get started.
+
+I’ve arranged a desk for you on Level 15 G3.08 for Monday, Wednesday, and Thursday. Our team’s anchor days are Wednesday and Thursday, so you’ll have a great chance to meet everyone and get up to speed on those days.
+
+Elliot (also cc’d) started a couple of months ago and has been shaping our MLOps roadmap. He will be setting up a catch-up with you soon to take you through where we are on our journey and share our priorities moving forward. A key priority at the moment is working with Liam on the handover of Athena to take our model refresh and model validation pipeline to the next level. The expectation is to migrate and likely refactor the tool to make it compatible with Airflow. I’m sure you’ll get more context on this during your discussions with the team.
+
+I’m really excited to have you join us, and while I’m away, I’m confident Kate and Elliot will be there to offer guidance and support.
+
+Looking forward to catching up when I’m back! In the meantime, best of luck settling in, and don't hesitate to reach out to Kate or Elliot if you need anything.
+
+Best regards,
+\[Your Name]
+
+---
+
+This version includes all the necessary details about his arrival.
