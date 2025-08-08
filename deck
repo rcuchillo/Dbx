@@ -1,30 +1,35 @@
-Here’s a concise summary of what’s working well and what could be improved based on the document:
+Here’s a concise, structured version of your notes that you can send to your team while keeping the key points clear and actionable:
 
 ---
 
-### ✅ **What’s Working Well:**
+**Subject:** Transaction Model – Key Updates
 
-* **Responsive and collaborative teams**, especially on recent BioCatch and Credit Redex workstreams.
-* **Strong relationships and informal communication**, making collaboration easy.
-* **Good understanding of each other’s work**, which helps with planning and change processes.
-* **High technical skills and domain knowledge** on both teams.
-* **Effective collaboration** between Quant and Analytics, especially when communication is regular.
-* **Focus on delivery** during frequent meetings, even if it adds pressure.
+Team,
+
+Following discussions with Vangelis and TMCS, here are the agreed points going forward:
+
+1. **Primary Focus**
+
+   * Target delivery quality at least as good as **SAM8**.
+   * The "threat delivery" exercise is interesting but must not delay or impact the main solution delivery.
+
+2. **Feature Review & Mapping**
+
+   * TMCS will review our features **once we have a manageable, prioritised set** to share.
+   * They will map these features to **TMRA** and **financial crime risk scenarios**.
+
+3. **Rules Development**
+
+   * Expect strong pushback from TMCS on rule development due to **resource constraints** (already escalated).
+   * While they may say rules should be “by exception,” we should be realistic that this won’t always hold true.
+
+4. **Scope Guidance from Vangelis**
+
+   * If something is **not covered by SAM8** (e.g., loans, mortgages), it is *good to have* but **not mandatory**.
+   * Replicating SAM8 use cases was discussed but **discarded** for obvious reasons.
+
+Let’s keep our focus sharp on the agreed priorities and minimise distractions from side exercises.
 
 ---
 
-### 🔧 **What Could Be Improved:**
-
-* **Need for a shared dashboard/tracker** to manage dependencies, blockers, and ownership—would boost transparency and accountability.
-* **Greater clarity on responsibilities**, especially with multiple services and stakeholders involved.
-* **More face time between teams**, particularly GCQA/FA meeting new joiners and aligning approaches.
-* **Consistency in tools and methodologies**, especially across Debit/Credit/retail portfolios.
-* **Better data and technology sharing**, e.g., using **Databricks** to centralize access and speed up development.
-* **Improve data consistency** by aligning on the same sources for model monitoring and FA.
-* **Establish feedback loops** post-model implementation.
-* **Enhance communication** between IVU and FA by sharing queries and documentation.
-* **Create a shared SharePoint space** for governance documents, including fairness analysis.
-
----
-
-Let me know if you’d like this turned into a slide or a one-pager.
+If you want, I can also prepare a **one-line bullet “cheat sheet”** version you can paste into Teams for a faster update.
