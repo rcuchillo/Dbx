@@ -1,35 +1,21 @@
-Here’s a concise, structured version of your notes that you can send to your team while keeping the key points clear and actionable:
+Here’s a clearer, more concise, and professional revision of your message:
+
 
 ---
 
-**Subject:** Transaction Model – Key Updates
+Hi AL,
 
-Team,
+I’m struggling to understand the rationale behind this request:
+"Review Raw Features – Joanne and Karan to review the list of 3000+ raw features for any missed risks, as much as possible before Quants (Remi and Anthony) return."
 
-Following discussions with Vangelis and TMCS, here are the agreed points going forward:
+Reviewing the full list of features will not help identify missed risks. Any feature that was dropped was excluded because it did not provide predictive value for identifying suspicious behaviour.
 
-1. **Primary Focus**
+If the goal is to ensure the ML model supports low-risk sampling effectively, I would recommend focusing on missed SARs in the Qo sample post-guardrails instead.
 
-   * Target delivery quality at least as good as **SAM8**.
-   * The "threat delivery" exercise is interesting but must not delay or impact the main solution delivery.
+Given the timeline and the reasoning, I don’t see value in conducting this review for the tactical model. However, I’m supportive of documenting this if it helps provide clarity and reassurance.
 
-2. **Feature Review & Mapping**
-
-   * TMCS will review our features **once we have a manageable, prioritised set** to share.
-   * They will map these features to **TMRA** and **financial crime risk scenarios**.
-
-3. **Rules Development**
-
-   * Expect strong pushback from TMCS on rule development due to **resource constraints** (already escalated).
-   * While they may say rules should be “by exception,” we should be realistic that this won’t always hold true.
-
-4. **Scope Guidance from Vangelis**
-
-   * If something is **not covered by SAM8** (e.g., loans, mortgages), it is *good to have* but **not mandatory**.
-   * Replicating SAM8 use cases was discussed but **discarded** for obvious reasons.
-
-Let’s keep our focus sharp on the agreed priorities and minimise distractions from side exercises.
 
 ---
 
-If you want, I can also prepare a **one-line bullet “cheat sheet”** version you can paste into Teams for a faster update.
+Do you want me to make it more direct and critical (challenging the request firmly) or softer and more collaborative?
+
