@@ -1,21 +1,40 @@
-Here’s a clearer, more concise, and professional revision of your message:
+Got it — here’s the same Fraud Machine Learning story, but expanded slightly into bullet points so it lands clearly and still fits a 2-minute slot:
 
 
 ---
 
-Hi AL,
+Fraud Machine Learning
 
-I’m struggling to understand the rationale behind this request:
-"Review Raw Features – Joanne and Karan to review the list of 3000+ raw features for any missed risks, as much as possible before Quants (Remi and Anthony) return."
+Journey & rollout
 
-Reviewing the full list of features will not help identify missed risks. Any feature that was dropped was excluded because it did not provide predictive value for identifying suspicious behaviour.
+Began developing internal fraud models in 2018.
 
-If the goal is to ensure the ML model supports low-risk sampling effectively, I would recommend focusing on missed SARs in the Qo sample post-guardrails instead.
+First model live in April 2021 for debit card present transactions.
 
-Given the timeline and the reasoning, I don’t see value in conducting this review for the tactical model. However, I’m supportive of documenting this if it helps provide clarity and reassurance.
+Expanded to debit card online, credit card, and outbound payments to cover both fraud and scams.
+
+
+What we replaced
+
+Legacy vendor system (FICO Falcon).
+
+Depended on the vendor to update models, limiting speed and flexibility.
+
+
+Immediate benefits
+
+More effective – over 2x better at detecting debit card fraud.
+
+Agile & in control – we can refresh and redevelop models quickly as fraud patterns change.
+
+Better customer experience – stronger protection with fewer unnecessary declines of genuine transactions.
+
+Scalable coverage – able to expand protection across more payment types without additional vendor cost or dependency.
+
+
 
 
 ---
 
-Do you want me to make it more direct and critical (challenging the request firmly) or softer and more collaborative?
+👉 Do you want me to now draft the Transaction Monitoring version in the same expanded bullet-point style?
 
