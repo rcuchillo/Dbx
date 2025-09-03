@@ -1,17 +1,21 @@
-Here’s a polished version of your email — clearer, more professional in tone, and easy for the recipient to act on:
+IVU
+
+Subject: Clarification on Model Performance Observation and Remediation Approach
+
+Hi [Recipient],
+
+I understand the intention to raise an observation regarding the decrease in model performance. However, under the two options currently listed—either a material change or an inception validation—you will not receive or review the evidence required to close the challenge. In practice, the challenge will simply be closed because the model is decommissioned.
+
+I appreciate the point of raising an issue on performance, but I don’t think the remediation proposed is appropriate. Would it not make more sense to have something along the lines of:
+
+Register a model rebuild by Dec 26; or
+
+Deploy a rebuild by Q1 2027?
 
 
----
+This is the first time I’ve seen a remediation created that would be closed before evidence can actually be shared, due to our model risk policy. That makes me think the current approach may not be fully aligned.
 
-Subject: Follow-up on Project Deck and Data Access
-
-Hi [Recipient’s Name],
-
-Thank you for sharing the deck. Given this project has now become a higher priority, it would be great to connect tomorrow if your schedule allows.
-
-There’s one critical piece of information I’ve been trying to confirm over the past month: the location of the data. Having visibility on the data is often helpful, as it allows us to explore tactical solutions in parallel while we work on the longer-term strategic approach.
-
-Do you have any details on the data warehouse setup? And is Sawai Rajpurohit the right person to speak with regarding this?
+Could we revisit the remediation to ensure it addresses the performance concern in a more effective way?
 
 Best regards,
 [Your Name]
@@ -19,5 +23,5 @@ Best regards,
 
 ---
 
-Would you like me to make this more formal (executive tone) or more collaborative (peer-to-peer tone)?
+
 
