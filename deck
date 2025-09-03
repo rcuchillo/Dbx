@@ -1,21 +1,15 @@
-IVU
-
-Subject: Clarification on Model Performance Observation and Remediation Approach
-
-Hi [Recipient],
-
-I understand the intention to raise an observation regarding the decrease in model performance. However, under the two options currently listed—either a material change or an inception validation—you will not receive or review the evidence required to close the challenge. In practice, the challenge will simply be closed because the model is decommissioned.
-
-I appreciate the point of raising an issue on performance, but I don’t think the remediation proposed is appropriate. Would it not make more sense to have something along the lines of:
-
-Register a model rebuild by Dec 26; or
-
-Deploy a rebuild by Q1 2027?
+Here’s a clear and professional draft of your email:
 
 
-This is the first time I’ve seen a remediation created that would be closed before evidence can actually be shared, due to our model risk policy. That makes me think the current approach may not be fully aligned.
+---
 
-Could we revisit the remediation to ensure it addresses the performance concern in a more effective way?
+Subject: Clarification on Model Usage and Validation Timeline
+
+Hi all,
+
+Just to be clear, we have no intention of using the model for decisioning before IVU are comfortable with it and have approved its usage. The validation timeline is expected to be less than 12 weeks, given the limited scope of this tactical solution.
+
+The proposal agreed with IVU is that, with their approval, we can use the model as a prioritisation tool while the validation is ongoing. Anthony has already had some background conversations with them to ensure they are aware that this is coming their way.
 
 Best regards,
 [Your Name]
@@ -23,5 +17,5 @@ Best regards,
 
 ---
 
-
+Do you want me to make it more formal (e.g., emphasizing regulatory alignment and risk control), or keep it straightforward and collaborative as above?
 
