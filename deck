@@ -1,54 +1,23 @@
-Here’s a concise, executive-ready draft for Hamish’s in-role promotion rationale:
+Understood — here’s a tighter, more natural version that reads like an executive project update rather than something “polished by AI”:
 
 
 ---
 
-Rationale for In-Role Promotion – Hamish [Last Name]
+Subject: Re: Request for Sign-Off – BB TM Final Feature Set
 
-Hamish has been with the bank for over seven years and has consistently expanded his responsibilities. Over the past two years, his role has grown significantly from a supportive AVP capacity into one that fully reflects a VP position.
+Dear all,
 
-Leadership & Impact: Hamish now leads the screening portfolio independently, delivering models that are both robust and high-performing. This work has resulted in savings of over 100 FTEs and established a strong foundation of reliability in a critical area.
+All relevant stakeholders have been involved since the start of the project, and we will ensure the appropriate representative signs off before go-live.
 
-Technical Expertise: Leveraging his previous experience at Barclays and his extensive network, Hamish is the go-to person for development platform support. He has gone above and beyond to ensure colleagues have access to the most efficient environment possible, despite structural limitations.
+The model has been built on sterling transactional data, which was part of the proposal from the outset. The request to use GTSA data only came towards the end of development, making it difficult to include now without materially delaying delivery. To address this, we have implemented guardrails and shown that the model still performs well on currency-related SARs using proxy indicators.
 
-Stakeholder Engagement: Hamish has developed strong relationships across the bank and is regarded as a trusted ML expert driving innovation. He has received numerous recognitions from both colleagues and senior stakeholders.
+To avoid further delay and loss of benefit, my recommendation is to proceed with the current model and guardrails, while continuing to expand coverage in the next phase. This will allow us to deliver value now while strengthening the model longer term.
 
-Innovation & Efficiency: Most recently, Hamish has been driving the automation of our data curation capabilities, enhancing efficiency and reliability across the team.
-
-
-Given the scope of his leadership, his technical authority, and his sustained delivery of measurable impact, Hamish’s current contribution is firmly at the VP level. His promotion would recognize both his achievements and the responsibilities he already carries.
+Kind regards,
+[Your Name]
 
 
 ---
 
-Would you like me to make this even more bullet-point heavy (to fit into a one-slide exec pack), or keep it in this narrative with supporting bullets format?
-
-
-
-Got it. I’ll mirror the concise, executive-focused structure I suggested for Hamish while incorporating the details from Hao’s manager’s write-up. Here’s a polished draft:
-
-
----
-
-Rationale for In-Role Promotion – Hao [Last Name]
-
-Hao joined Barclays three years ago at AVP level, bringing with him extensive experience in credit risk modelling and software engineering, including a PhD in High Energy Physics. From the outset, he was recruited with the expectation of rapid progression, and over this period he has evolved from an individual contributor into a leader delivering VP-level impact.
-
-Leadership & Delivery: Hao has taken end-to-end ownership of high-impact projects, including the delivery of the first-generation USCB Transaction Monitoring ML model and its integration with SAM8. This initiative significantly improved alert quality and reduced operational workload, saving approximately 15 FTEs.
-
-Innovation & Efficiency: He independently optimized the SAM8 rule simulation process, reducing the cycle from months to days. This work improved alert performance and lowered technology costs by eliminating reliance on high-cost UAT environments.
-
-Technical Authority: Hao is currently leading development of the next-generation IFC Transaction Monitoring ML model, which will become the primary engine for alert generation—further enhancing detection and system resilience.
-
-Collaboration & Influence: He proactively engages stakeholders across FIU operations, TMCS, and business teams to drive model improvements. He is widely recognized for clear communication, rapid delivery, and trusted expertise.
-
-Coaching & Growth: Beyond delivery, Hao provides critical support in onboarding and mentoring junior hires, offering technical guidance and strengthening the team’s long-term capability.
-
-
-Hao’s consistent delivery, technical depth, and stakeholder engagement have expanded his remit well beyond the scope of an AVP. His current contribution and leadership are firmly at VP level, and his promotion would rightly recognize the impact he is already making.
-
-
----
-
-Do you want me to streamline this further into a one-page “exec pack” version (with fewer words and punchier bullets), or keep the narrative + bullets balance like this?
+Would you like me to make it even more direct and one-page board-style (just 2 short paragraphs), so it feels like a crisp sign-off note?
 
