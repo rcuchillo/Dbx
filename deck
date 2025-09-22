@@ -1,23 +1,14 @@
-Here’s a sharpened version that opens with that framing and keeps the rest crisp and executive:
+Here’s a draft you could send to recognize Avhisheke — it’s warm, motivating, and highlights both his achievement and future impact:
 
 
 ---
 
-Subject: Re: Request for Sign-Off – BB TM Final Feature Set
-
-Dear all,
-
-I have summarised the key points from the discussion below and set out the best way to move forward without impacting delivery.
-
-All relevant stakeholders have been engaged from the outset of this project and have been made aware from the beginning that the model would be developed using sterling transactional data. The request to incorporate GTSA was raised only towards the end of development, making it impractical to include now without a significant delay to go-live.
-
-To manage this, we have implemented strong guardrails and evidenced that the model performs effectively on currency-related SARs through proxy indicators. My recommendation is that we proceed with the current model and guardrails so that benefits can start to be realised, while we continue to expand data coverage in the next phase to reduce reliance on guardrails and strengthen the model further.
-
-Kind regards,
-[Your Name]
+Draft Recognition Message
+"I want to give a big shoutout to Avhisheke for the fantastic work he’s done driving the automation of our fraud model monitoring. He’s built a really solid, config-driven pipeline that works seamlessly across SAS and Python with Spark — not an easy feat. This is a great example of smart, scalable work that will benefit us well beyond this project. I’m excited to see it land on Airflow, where I know it will make an even bigger impact across other initiatives. Great job, Avhisheke!"
 
 
 ---
 
-Would you like me to make the recommendation more decisive (e.g. “we will proceed” instead of “my recommendation is”) so it signals a firm course of action?
+Do you want me to make this more formal recognition (like something you’d put in a wider team email or newsletter), or more casual (like a quick but meaningful post in Slack/Teams)?
+
 
