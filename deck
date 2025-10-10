@@ -1,269 +1,63 @@
-Here’s an executive-style proposal draft you can adapt or present to your stakeholders:
+Of course — “beacon” can sound a bit informal or too conceptual.
+A clearer and more professional alternative is “reference points”, “anchor cases”, or “exemplar SARs” depending on the tone you want.
+
+Here’s the revised executive email with that wording adjusted:
 
 
 ---
 
-Proposal: Enhancing SAR Coverage through Targeted Tactical Machine Learning
+Subject: Proposal: Tactical ML Approach to Enhance SAR Coverage in High-Priority Typologies
 
-Objective
+Dear [Recipient/Team],
 
-To increase detection of suspicious activity in low-volume but high-impact risk scenarios—such as human trafficking and terrorist financing—by leveraging high-scoring known SARs as “beacons” to identify similar unalerted customers in the feature space of the tactical machine learning model.
+I’d like to propose a tactical enhancement to our current detection strategy aimed at improving SAR coverage in low-volume but high-impact typologies such as Human trafficking and Terrorist financing.
 
-Strategic Rationale
+Currently, our models focus on very high threshold scores (e.g., ≥ 0.98), which works well for high-volume typologies but may miss relevant activity in more sensitive, intelligence-led areas. To address this, the idea is to use known high-scoring SARs as anchor cases to identify customers with similar behavioural profiles in the model’s feature space — even if their scores fall just below the operational threshold.
 
-The current model strategy focuses primarily on customers with scores above a high threshold (e.g., 0.98). This maximizes precision but may overlook relevant suspicious activity, especially in niche typologies where the number of SARs is inherently low. By introducing a targeted neighbour-based search around known SARs, the institution can proactively identify hidden suspicious activity that traditional thresholding may miss.
+How it would work
 
-This approach enables:
+Anchor on known SARs: Select high-scoring SARs from priority typologies.
 
-Improved SAR coverage in under-represented risk categories.
+Neighbourhood search: Identify unalerted customers with similar transaction and behavioural profiles.
 
-Better alignment between model outputs and intelligence-driven priorities.
+Risk prioritisation: Rank candidates based on similarity, score, and typology metadata.
 
-Faster feedback loops to refine scenarios and calibrate future models.
+Operational triage: Produce targeted tactical lists for investigation or intelligence teams.
 
-
-
----
-
-Proposed Approach
-
-1. Anchor on Known High-Scoring SARs
-
-Select a curated set of confirmed SARs with high model scores (e.g., ≥0.98) from priority risk categories such as:
-
-Human trafficking
-
-Terrorist financing
-
-Other strategic typologies identified by Financial Crime Intelligence.
-
-
-Ensure the selection covers representative patterns of activity within each typology.
-
-
-2. Neighbourhood Search in Feature Space
-
-Use a similarity search (e.g., k-nearest neighbours in model feature hyperspace) to identify customers with transaction profiles most similar to the anchor SARs.
-
-Focus on unalerted customers with model scores slightly below the existing operational threshold (e.g., 0.85–0.98).
-
-Prioritize those with tight proximity (high similarity) to anchor SARs.
-
-
-3. Profiling & Prioritisation Layer
-
-Overlay similarity results with risk scenario metadata (e.g., typology indicators, geography, customer segment).
-
-Rank customers by a combined risk index (e.g., similarity score × model score × typology weight).
-
-Apply business rules to filter out known low-risk patterns or operational exclusions.
-
-
-4. Operational Deployment
-
-Generate daily or weekly tactical lists of top-ranked unalerted customers per risk category.
-
-Route these cases to specialist intelligence or investigation teams for rapid triage.
-
-Optionally integrate into existing triage platforms or SAR decisioning workflows.
-
-
-5. Feedback & Continuous Improvement
-
-Track the outcome of triaged cases (SAR filed, NSTR, false positive).
-
-Refine similarity thresholds and weights to improve hit rates over time.
-
-Identify patterns that can be incorporated into future model training or scenario rules.
-
-
-
----
 
 Expected Benefits
 
-Dimension	Current State	Proposed Enhancement
+Broader SAR coverage in niche risk scenarios.
 
-SAR Coverage	Limited to top threshold alerts	Broader coverage in niche typologies through targeted similarity search
-Risk Typology Sensitivity	Strong for high-volume typologies only	Increased sensitivity for human trafficking, terrorist financing, and other low-volume scenarios
-Efficiency of Investigations	High precision but may miss high-risk customers	Balanced precision–recall trade-off with tactical lists curated for impact
-Intelligence Integration	Passive thresholding	Proactive intelligence-driven targeting around known SAR “beacons”
-Model Feedback Loop	Limited feedback to model refinement	Continuous improvement informed by real investigation outcomes
+Improved alignment with intelligence priorities.
 
+Increased ability to surface hidden suspicious activity.
 
-
----
-
-Implementation Roadmap
-
-1. Pilot Design (Weeks 1–4)
-
-Define risk categories, SAR selection criteria, and similarity methodology.
-
-Build proof-of-concept for neighbourhood search and tactical list generation.
+Minimal operational uplift through targeted lists rather than mass alerting.
 
 
+Pilot Proposal
 
-2. Operational Pilot (Weeks 5–10)
+I recommend a 3-month pilot:
 
-Generate weekly tactical lists.
+Weeks 1–4: Build and test the similarity search prototype.
 
-Partner with Financial Crime Intelligence to triage cases and document outcomes.
+Weeks 5–10: Generate and triage tactical lists with intelligence teams.
 
-
-
-3. Evaluation & Scaling (Weeks 11–14)
-
-Assess hit rate, SAR uplift, and operational effort.
-
-Calibrate thresholds and risk weights.
-
-Prepare for scaled deployment.
+Weeks 11–14: Evaluate impact and refine thresholds.
 
 
+This tactical layer would complement our existing model framework, offering a smarter way to surface additional suspicious activity where the stakes are highest.
 
+If this aligns with your priorities, I’d be happy to walk through the proposal in more detail and shape the pilot plan together.
+
+Best regards,
+[Your Full Name]
+[Your Role / Department]
+[Your Contact Information]
 
 
 ---
 
-Success Metrics
-
-SAR uplift in low-volume risk categories (e.g., % increase in terrorist financing SARs).
-
-Precision of tactical lists (e.g., proportion of triaged cases leading to SAR filings).
-
-Coverage gap reduction, measured as previously unalerted customers identified.
-
-Investigator feedback on case quality and investigative value.
-
-
-
----
-
-Conclusion
-
-This tactical ML approach enables smarter use of existing model outputs to uncover activity that may otherwise remain invisible. It strengthens coverage of critical but low-prevalence risk scenarios and aligns detection capabilities with the organisation’s financial crime priorities.
-
-Next step: Approve a 3-month pilot to test and operationalise the neighbour-based tactical model.
-
-
----
-
-Would you like me to also draft a shorter version (1-pager) for executives, or keep this more detailed format for strategy teams?
-
-
-
-
-Here’s a 1-page executive summary version of the proposal, suitable for senior leadership:
-
-
----
-
-Tactical ML Proposal: Enhancing SAR Coverage in Niche Risk Scenarios
-
-Objective
-
-Improve coverage of low-volume but high-impact typologies—such as Human trafficking and Terrorist financing—by using a neighbour-based tactical machine learning approach. This method targets suspicious activity that sits below current operational thresholds but closely resembles known high-risk patterns.
-
-
----
-
-Current Challenge
-
-Detection relies on a fixed high threshold (e.g., score ≥ 0.98), optimized for precision.
-
-Low-prevalence typologies generate few SARs, limiting coverage.
-
-High-risk customers with slightly lower scores remain unalerted.
-
-
-
----
-
-Proposed Solution
-
-1. Anchor on Known SARs:
-
-Use high-scoring SARs from key typologies as reference points (“beacons”).
-
-
-
-2. Neighbourhood Search:
-
-Identify customers whose model feature profiles are most similar to anchor SARs.
-
-Focus on those scoring just below threshold (e.g., 0.85–0.98).
-
-
-
-3. Risk Prioritisation:
-
-Overlay similarity results with typology and segment metadata.
-
-Rank customers by combined risk index.
-
-
-
-4. Operational Triage:
-
-Generate tactical lists for intelligence or investigations teams.
-
-Integrate seamlessly with existing workflows.
-
-
-
-
-
----
-
-Expected Impact
-
-Today	With Tactical ML
-
-Focused only on top threshold scores	Captures high-risk customers below threshold
-Limited SAR coverage for niche typologies	Expanded SAR coverage in human trafficking, terrorist financing, etc.
-Reactive detection	Intelligence-led, proactive targeting
-Static thresholding	Adaptive, data-driven neighbourhood search
-
-
-
----
-
-Success Metrics
-
-SAR uplift in targeted typologies.
-
-Higher investigative value of tactical lists.
-
-Reduction in undetected high-risk customers.
-
-Investigator feedback and precision improvement.
-
-
-
----
-
-Pilot Roadmap (3 Months)
-
-Weeks 1–4: Design and build similarity search prototype.
-
-Weeks 5–10: Generate and triage tactical lists.
-
-Weeks 11–14: Evaluate performance and prepare for scale.
-
-
-
----
-
-Why It Matters
-
-This targeted approach unlocks additional risk coverage without expanding operational volume drastically. By turning known SARs into beacons, the organisation can uncover hidden suspicious activity, sharpen typology coverage, and strengthen financial crime defence.
-
-👉 Next Step: Approve pilot to operationalise the tactical ML approach.
-
-
----
-
-Would you like me to format this into a PowerPoint-style slide deck (2–3 slides) for leadership presentation?
-
+Would you like me to make this email slightly more concise (e.g., trimming the technical explanation) for a faster executive read?
 
