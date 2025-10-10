@@ -1,63 +1,25 @@
-Of course — “beacon” can sound a bit informal or too conceptual.
-A clearer and more professional alternative is “reference points”, “anchor cases”, or “exemplar SARs” depending on the tone you want.
-
-Here’s the revised executive email with that wording adjusted:
+Here’s a clean and professional draft of your feedback email that keeps your tone constructive and analytical:
 
 
 ---
 
-Subject: Proposal: Tactical ML Approach to Enhance SAR Coverage in High-Priority Typologies
+Subject: Feedback on Vendor Call
 
-Dear [Recipient/Team],
+Hi [Name],
 
-I’d like to propose a tactical enhancement to our current detection strategy aimed at improving SAR coverage in low-volume but high-impact typologies such as Human trafficking and Terrorist financing.
+I wanted to share some feedback on today’s call with the vendor.
 
-Currently, our models focus on very high threshold scores (e.g., ≥ 0.98), which works well for high-volume typologies but may miss relevant activity in more sensitive, intelligence-led areas. To address this, the idea is to use known high-scoring SARs as anchor cases to identify customers with similar behavioural profiles in the model’s feature space — even if their scores fall just below the operational threshold.
+Overall, the discussion was a step forward compared to the previous one — it was less of a sales pitch and more focused on the methodology, which was appreciated. That said, I remain somewhat sceptical about the solution being truly “unsupervised” in the strict sense. It appears closer to a semi-supervised approach, where a small set of anchor points is used via a feedback loop to identify customers with similar behaviours. This is not fundamentally different from what we already do or are exploring (e.g., with the tactical model for retail).
 
-How it would work
+I also question how meaningful the probability score is in such a setup, given that alerts would still require review. Their explanation of how the blended models are combined and how outputs are calibrated wasn’t entirely clear, though this is more of a detail.
 
-Anchor on known SARs: Select high-scoring SARs from priority typologies.
+What I found lacking was evidence of performance. The only slide that touched on this was vague — it briefly mentioned SAR filings but didn’t provide any insight into the quality of those SARs or conversion rates, which would have been valuable.
 
-Neighbourhood search: Identify unalerted customers with similar transaction and behavioural profiles.
-
-Risk prioritisation: Rank candidates based on similarity, score, and typology metadata.
-
-Operational triage: Produce targeted tactical lists for investigation or intelligence teams.
-
-
-Expected Benefits
-
-Broader SAR coverage in niche risk scenarios.
-
-Improved alignment with intelligence priorities.
-
-Increased ability to surface hidden suspicious activity.
-
-Minimal operational uplift through targeted lists rather than mass alerting.
-
-
-Pilot Proposal
-
-I recommend a 3-month pilot:
-
-Weeks 1–4: Build and test the similarity search prototype.
-
-Weeks 5–10: Generate and triage tactical lists with intelligence teams.
-
-Weeks 11–14: Evaluate impact and refine thresholds.
-
-
-This tactical layer would complement our existing model framework, offering a smarter way to surface additional suspicious activity where the stakes are highest.
-
-If this aligns with your priorities, I’d be happy to walk through the proposal in more detail and shape the pilot plan together.
-
-Best regards,
-[Your Full Name]
-[Your Role / Department]
-[Your Contact Information]
+Best,
+[Your Name]
 
 
 ---
 
-Would you like me to make this email slightly more concise (e.g., trimming the technical explanation) for a faster executive read?
+Would you like me to make it more formal (for senior stakeholders) or keep this neutral and conversational as it is?
 
